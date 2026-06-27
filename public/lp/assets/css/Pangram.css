@@ -1,0 +1,62 @@
+@font-face {
+        font-family: 'Pangram';
+        src: url(../fonts/Pangram-3229f2086ae03cd19f21df70d00d4ff1.woff2) format('woff2'),
+        url(../fonts/Pangram-226b02448ce02eb664c91ad195b61e58.woff) format('woff');
+        font-weight: 200;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Pangram';
+        src: url(../fonts/Pangram-1b86547364e4480414002f0bd52d25ad.woff2) format('woff2'),
+        url(../fonts/Pangram-0b60e4895c279d708cb47618067fb5ed.woff) format('woff');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Pangram';
+        src: url(../fonts/Pangram-75a6030e1b9da39b49d35fd39a9ed3e4.woff2) format('woff2'),
+        url(../fonts/Pangram-4e7c0a37cf0a64d27f231f2adcf4f469.woff) format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Pangram';
+        src: url(../fonts/Pangram-6231b0834d6ba749c3ed2261e5a46509.woff2) format('woff2'),
+        url(../fonts/Pangram-ad82993940937dbfa3c1ae09bd973cfb.woff) format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Pangram';
+        src: url(../fonts/Pangram-82e78e0b26fecb8725c6b840de7a5225.woff2) format('woff2'),
+        url(../fonts/Pangram-df455387b9f9d761eda985029ff0b65c.woff) format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Pangram';
+        src: url(../fonts/Pangram-f405bc05e8da86239f347c2a5aed36bd.woff2) format('woff2'),
+        url(../fonts/Pangram-411c9d38c68031531eed158ebf4ebb28.woff) format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Pangram';
+        src: url(../fonts/Pangram-58bc38bbbefa5b14bcf8b707c2ac4a7c.woff2) format('woff2'),
+        url(../fonts/Pangram-9047d8199320e45d2d2879990879b1e0.woff) format('woff');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+}

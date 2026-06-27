@@ -1,0 +1,151 @@
+/* Hero com gradiente Unyco */
+.checkout-hero {
+  min-height: 40vh;
+  background: linear-gradient(135deg, var(--azul-escuro, #0b1c3f), var(--azul-claro, #3B82F6));
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+.checkout-hero h1 {
+  font-family: 'Pangram', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.checkout-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Cards dos planos */
+.plan-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+.plan-card h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--azul-escuro, #0b1c3f);
+}
+.plan-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+.plan-price {
+  margin: 1.2rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--azul-claro, #3B82F6);
+}
+.plan-price small {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #999;
+}
+
+/* Benefícios */
+.plan-perks {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+}
+.plan-perks li {
+  font-size: 0.9rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.4rem;
+  position: relative;
+}
+.plan-perks li::before {
+  content: "✓";
+  color: #28a745;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Botão escolher */
+.btn-choose {
+  background: var(--azul-claro, #3B82F6);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  transition: background 0.2s ease;
+}
+.btn-choose:hover {
+  background: #2563eb;
+}
+
+
+.checkout-hero {
+  background: linear-gradient(135deg, var(--azul-escuro, #0b1f3a), var(--azul-claro, #3b82f6));
+  min-height: 300px;
+  justify-content: center;
+}
+
+.checkout-logo {
+  max-width: 220px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+/* Modern Modal Styles */
+.modal-content {
+  border: none !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+.modal-body .form-control {
+  border-radius: 0.75rem;
+  border: 1.5px solid #e2e8f0;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.modal-body .form-control:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.modal-body .form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #334155;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modal-body .form-label i {
+  color: #3B82F6;
+  width: 14px;
+  text-align: center;
+}
+
+.modal-body input[type="date"] {
+  text-transform: lowercase;
+}
+
+.modal-body input[type="text"]::-webkit-input-placeholder {
+  color: #cbd5e1;
+}
+
+.modal-body input[type="text"]:-moz-placeholder {
+  color: #cbd5e1;
+}
+
+.btn-close-white {
+  filter: brightness(0) invert(1);
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Checkout - Unyco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lp/assets/css/Pangram.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+  <link rel="stylesheet" href="/lp/assets/css/checkout.css">
+</head>
+<body>
+
+<div id="mainContent">
+  <section class="checkout-hero text-center text-white d-flex align-items-center">
+    <div class="container">
+      <div class="mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 251.536 69.351">
+          <path d="M245.447,81.235h14.214c1.421,3.131,3.886,4.365,8.434,4.365,6.254,0,9-2.941,9-10.057V70.894a13.369,13.369,0,0,1-11.655,6.262c-9.854,0-20.374-6.642-20.374-23.814V29.814h14.215V53.342c0,7.4,3.6,10.532,8.907,10.532,5.117,0,8.906-3.32,8.906-10.532V29.814h14.215V75.069c0,16.317-10.424,22.864-23.216,22.864C257.008,97.933,247.818,92.809,245.447,81.235ZM354.334,73.1s0,0,0,0c-.2-.15-.379-.285-.524-.4l-.068-.054-.051-.041c-.152-.121-.327-.262-.535-.439l-.261-.223A47.629,47.629,0,0,1,347.973,67l9.411-10.011a30.322,30.322,0,0,0,5.277,5.21c.3.228.595.442.89.649a11.277,11.277,0,0,0,6.263,1.786c6.444,0,10.8-4.648,10.8-11.384s-4.357-11.385-10.8-11.385a10.824,10.824,0,0,0-8.055,3.268L338.507,71.118a25.056,25.056,0,0,1-17.82,6.8c-14.783,0-25.205-10.436-25.205-24.666S305.9,28.581,320.687,28.581c1.147,0,2.97.07,4.06.194V42.321a18.012,18.012,0,0,0-4.06-.457c-6.444,0-10.8,4.648-10.8,11.385s4.359,11.384,10.8,11.384a10.814,10.814,0,0,0,8.065-3.281l23.253-25.984a25.057,25.057,0,0,1,17.809-6.786c14.783,0,25.205,10.435,25.205,24.667S384.6,77.915,369.815,77.915A25.718,25.718,0,0,1,354.334,73.1Zm-210.849-19V29.814H157.7V54.1c0,7.4,3.6,10.531,8.907,10.531s8.907-3.131,8.907-10.531V29.814h14.215V54.1c0,15.749-9.288,23.813-23.122,23.813S143.484,69.945,143.484,54.1ZM226.3,76.681V52.394c0-7.4-3.6-10.531-8.907-10.531s-8.907,3.13-8.907,10.531V76.681H194.276V52.394c0-15.749,9.286-23.813,23.121-23.813s23.121,7.969,23.121,23.813V76.681Z" transform="translate(-143.484 -28.581)" fill="#fff"/>
+        </svg>
+      </div>
+      <h1>Escolha o seu Plano</h1>
+      <p>Aproveite todos os benefícios exclusivos da Unyco</p>
+    </div>
+  </section>
+
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center" id="plansContainer"></div>
+
+    <div class="mt-5 text-center">
+      <button type="button" class="btn btn-outline-warning px-4"
+              data-bs-toggle="modal" data-bs-target="#dadosModal" data-plan="0">
+        Continuar sem plano
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="dadosModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content" style="border:none;border-radius:1.25rem;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.3);">
+      <form id="dadosForm">
+        <div style="background:linear-gradient(135deg,#0b1c3f,#1e3a5f);padding:2rem 2.5rem;position:relative;">
+          <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+            <div style="display:flex;align-items:center;gap:1rem;">
+              <div style="width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;">
+                <i class="fas fa-map-marker-alt" style="color:#60a5fa;font-size:1.3rem;"></i>
+              </div>
+              <div>
+                <h5 style="color:#fff;font-weight:700;margin:0;font-size:1.3rem;">Complete seus dados</h5>
+                <p style="color:rgba(255,255,255,0.6);margin:0;font-size:0.85rem;">Preencha seu endereço para finalizar</p>
+              </div>
+            </div>
+            <span style="background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);font-size:0.75rem;font-weight:600;padding:4px 12px;border-radius:20px;white-space:nowrap;">Passo 2 de 2</span>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" style="position:absolute;top:1.5rem;right:1.5rem;opacity:0.7;"></button>
+        </div>
+        <div class="modal-body" style="padding:2rem 2.5rem;">
+          <input type="hidden" name="plan_id" id="plan_id_modal">
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div style="grid-column:1/2;">
+              <label class="form-label" style="font-weight:600;font-size:0.85rem;color:#334155;margin-bottom:0.4rem;">
+                <i class="fas fa-map-pin" style="color:#3B82F6;margin-right:6px;width:14px;"></i>CEP
+              </label>
+              <input type="text" name="cep" id="cep" class="form-control" placeholder="00000-000" maxlength="9" required style="border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.7rem 1rem;font-size:0.95rem;transition:border-color 0.2s;">
+            </div>
+            <div style="grid-column:2/3;">
+              <label class="form-label" style="font-weight:600;font-size:0.85rem;color:#334155;margin-bottom:0.4rem;">
+                <i class="fas fa-home" style="color:#3B82F6;margin-right:6px;width:14px;"></i>Número
+              </label>
+              <input type="text" name="number" id="number" class="form-control" required style="border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.7rem 1rem;font-size:0.95rem;">
+            </div>
+          </div>
+
+          <div style="margin-top:1rem;">
+            <label class="form-label" style="font-weight:600;font-size:0.85rem;color:#334155;margin-bottom:0.4rem;">
+              <i class="fas fa-road" style="color:#3B82F6;margin-right:6px;width:14px;"></i>Endereço
+            </label>
+            <input type="text" name="address" id="address" class="form-control" required style="border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.7rem 1rem;font-size:0.95rem;">
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;">
+            <div>
+              <label class="form-label" style="font-weight:600;font-size:0.85rem;color:#334155;margin-bottom:0.4rem;">
+                <i class="fas fa-building" style="color:#3B82F6;margin-right:6px;width:14px;"></i>Bairro
+              </label>
+              <input type="text" name="bairro" id="bairro" class="form-control" required style="border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.7rem 1rem;font-size:0.95rem;">
+            </div>
+            <div>
+              <label class="form-label" style="font-weight:600;font-size:0.85rem;color:#334155;margin-bottom:0.4rem;">
+                <i class="fas fa-city" style="color:#3B82F6;margin-right:6px;width:14px;"></i>Cidade
+              </label>
+              <input type="text" name="cidade" id="cidade" class="form-control" required style="border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.7rem 1rem;font-size:0.95rem;">
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;">
+            <div>
+              <label class="form-label" style="font-weight:600;font-size:0.85rem;color:#334155;margin-bottom:0.4rem;">
+                <i class="fas fa-flag" style="color:#3B82F6;margin-right:6px;width:14px;"></i>Estado
+              </label>
+              <input type="text" name="estado" id="estado" class="form-control" maxlength="2" required style="border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.7rem 1rem;font-size:0.95rem;text-transform:uppercase;">
+            </div>
+            <div>
+              <label class="form-label" style="font-weight:600;font-size:0.85rem;color:#334155;margin-bottom:0.4rem;">
+                <i class="fas fa-calendar-alt" style="color:#3B82F6;margin-right:6px;width:14px;"></i>Data de nascimento
+              </label>
+              <input type="date" name="birth_date" id="birth_date" class="form-control" required style="border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.7rem 1rem;font-size:0.95rem;">
+            </div>
+          </div>
+
+          <p style="margin-top:1.25rem;font-size:0.8rem;color:#94a3b8;display:flex;align-items:center;gap:6px;">
+            <i class="fas fa-info-circle"></i>
+            O CEP preenche automaticamente o endereço. Confira os dados antes de finalizar.
+          </p>
+        </div>
+        <div style="padding:1.25rem 2.5rem 2rem;display:flex;gap:0.75rem;">
+          <button type="button" class="btn" data-bs-dismiss="modal" style="flex:1;border-radius:0.75rem;border:1.5px solid #e2e8f0;padding:0.75rem;font-weight:600;color:#64748b;background:#fff;">Cancelar</button>
+          <button type="submit" class="btn" style="flex:2;border-radius:0.75rem;background:linear-gradient(135deg,#3B82F6,#2563eb);color:#fff;padding:0.75rem;font-weight:700;font-size:1rem;border:none;box-shadow:0 4px 14px rgba(59,130,246,0.4);transition:all 0.2s;">
+            <i class="fas fa-check-circle" style="margin-right:8px;"></i>Finalizar Cadastro
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="successScreen" hidden style="position:fixed;inset:0;z-index:9999;background:linear-gradient(135deg,#0b0f1a,#1a2238);color:white;display:flex;justify-content:center;align-items:center;">
+  <div style="background:#1e273b;border-radius:1rem;padding:3rem 2rem;max-width:550px;box-shadow:0 8px 24px rgba(0,0,0,0.4);text-align:center;animation:fadeIn 0.6s ease-out;">
+    <div style="margin-bottom:20px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 251.536 69.351">
+        <path d="M245.447,81.235h14.214c1.421,3.131,3.886,4.365,8.434,4.365,6.254,0,9-2.941,9-10.057V70.894a13.369,13.369,0,0,1-11.655,6.262c-9.854,0-20.374-6.642-20.374-23.814V29.814h14.215V53.342c0,7.4,3.6,10.532,8.907,10.532,5.117,0,8.906-3.32,8.906-10.532V29.814h14.215V75.069c0,16.317-10.424,22.864-23.216,22.864C257.008,97.933,247.818,92.809,245.447,81.235ZM354.334,73.1s0,0,0,0c-.2-.15-.379-.285-.524-.4l-.068-.054-.051-.041c-.152-.121-.327-.262-.535-.439l-.261-.223A47.629,47.629,0,0,1,347.973,67l9.411-10.011a30.322,30.322,0,0,0,5.277,5.21c.3.228.595.442.89.649a11.277,11.277,0,0,0,6.263,1.786c6.444,0,10.8-4.648,10.8-11.384s-4.357-11.385-10.8-11.385a10.824,10.824,0,0,0-8.055,3.268L338.507,71.118a25.056,25.056,0,0,1-17.82,6.8c-14.783,0-25.205-10.436-25.205-24.666S305.9,28.581,320.687,28.581c1.147,0,2.97.07,4.06.194V42.321a18.012,18.012,0,0,0-4.06-.457c-6.444,0-10.8,4.648-10.8,11.385s4.359,11.384,10.8,11.384a10.814,10.814,0,0,0,8.065-3.281l23.253-25.984a25.057,25.057,0,0,1,17.809-6.786c14.783,0,25.205,10.435,25.205,24.667S384.6,77.915,369.815,77.915A25.718,25.718,0,0,1,354.334,73.1Zm-210.849-19V29.814H157.7V54.1c0,7.4,3.6,10.531,8.907,10.531s8.907-3.131,8.907-10.531V29.814h14.215V54.1c0,15.749-9.288,23.813-23.122,23.813S143.484,69.945,143.484,54.1ZM226.3,76.681V52.394c0-7.4-3.6-10.531-8.907-10.531s-8.907,3.13-8.907,10.531V76.681H194.276V52.394c0-15.749,9.286-23.813,23.121-23.813s23.121,7.969,23.121,23.813V76.681Z" transform="translate(-143.484 -28.581)" fill="#fff"/>
+      </svg>
+    </div>
+    <h2 style="color:#fff;font-weight:700;margin-bottom:1rem;">🎉 Cadastro concluído!</h2>
+    <p style="color:#e0e0e0;margin-bottom:1rem;" class="lead">Nosso time entrará em contato para finalizar o processo.</p>
+    <p style="color:#ccc;" class="small">Você será redirecionado automaticamente em alguns segundos.</p>
+    <a href="/" style="display:inline-block;margin-top:20px;background:#22d3ee;border:none;color:#000;font-weight:bold;padding:0.8rem 1.5rem;border-radius:999px;text-decoration:none;">Ir agora</a>
+  </div>
+</div>
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function() {
+  var plansContainer = document.getElementById('plansContainer');
+  var successScreen = document.getElementById('successScreen');
+  var mainContent = document.getElementById('mainContent');
+
+  fetch('/api/config/public')
+    .then(function(r) { return r.json(); })
+    .then(function(cfg) {
+      if (cfg && cfg.config && cfg.config.plans_enabled === false) {
+        window.location.href = '/';
+        return;
+      }
+      return fetch('/api/lp/session', { credentials: 'same-origin' })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (!data.success) {
+            window.location.href = '/lp/index.html#login';
+            return;
+          }
+          loadPlans();
+        });
+    })
+    .catch(function() {
+      window.location.href = '/lp/index.html#login';
+    });
+
+  function formatPrice(price) {
+    return parseFloat(price).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+
+  function loadPlans() {
+    fetch('/api/lp/plans', { credentials: 'same-origin' })
+      .then(function(r) { return r.json(); })
+      .then(function(result) {
+        if (!result.success || !result.data) return;
+        var html = '';
+        result.data.forEach(function(p) {
+          var perksHtml = '';
+          if (p.perks) {
+            perksHtml = '<ul class="plan-perks text-start">';
+            p.perks.split('\n').forEach(function(perk) {
+              if (perk.trim()) perksHtml += '<li>' + escapeHtml(perk) + '</li>';
+            });
+            perksHtml += '</ul>';
+          }
+          var periodLabel = p.billing_period === 'anual' ? 'ano' : 'mês';
+          html += '<div class="col-md-4">' +
+            '<div class="plan-card h-100 d-flex flex-column text-center">' +
+            '<h4>' + escapeHtml(p.name) + '</h4>' +
+            '<p class="plan-desc flex-grow-1">' + escapeHtml(p.description || '').replace(/\n/g, '<br>') + '</p>' +
+            '<div class="plan-price"><span>R$ ' + formatPrice(p.price) + '</span><small>/ ' + periodLabel + '</small></div>' +
+            perksHtml +
+            '<button type="button" class="btn btn-choose mt-auto" data-bs-toggle="modal" data-bs-target="#dadosModal" data-plan="' + p.id + '">Escolher</button>' +
+            '</div></div>';
+        });
+        plansContainer.innerHTML = html;
+      });
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str || '';
+    return div.innerHTML;
+  }
+
+  var dadosModal = document.getElementById('dadosModal');
+  dadosModal.addEventListener('show.bs.modal', function(event) {
+    var button = event.relatedTarget;
+    var planId = button ? button.getAttribute('data-plan') : '0';
+    document.getElementById('plan_id_modal').value = planId;
+  });
+
+  document.getElementById('cep').addEventListener('input', function(e) {
+    var v = e.target.value.replace(/\D/g, '');
+    if (v.length > 8) v = v.slice(0, 8);
+    if (v.length > 5) v = v.replace(/(\d{5})(\d)/, '$1-$2');
+    e.target.value = v;
+  });
+
+  document.getElementById('cep').addEventListener('blur', function() {
+    var cep = this.value.replace(/\D/g, '');
+    if (cep.length !== 8) return;
+    fetch('https://viacep.com.br/ws/' + cep + '/json/')
+      .then(function(r) { return r.json(); })
+      .then(function(dados) {
+        if (dados.erro) { alert('CEP não encontrado!'); return; }
+        document.getElementById('address').value = dados.logradouro || '';
+        document.getElementById('bairro').value = dados.bairro || '';
+        document.getElementById('cidade').value = dados.localidade || '';
+        document.getElementById('estado').value = dados.uf || '';
+        document.getElementById('number').focus();
+      })
+      .catch(function() { alert('Erro ao buscar o CEP!'); });
+  });
+
+  document.getElementById('dadosForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var submitBtn = this.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Processando...';
+
+    var payload = {
+      plan_id: parseInt(document.getElementById('plan_id_modal').value) || 0,
+      cep: document.getElementById('cep').value,
+      address: document.getElementById('address').value,
+      number: document.getElementById('number').value,
+      bairro: document.getElementById('bairro').value,
+      cidade: document.getElementById('cidade').value,
+      estado: document.getElementById('estado').value,
+      birth_date: document.getElementById('birth_date').value
+    };
+
+    fetch('/api/lp/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify(payload)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(result) {
+      if (result.success) {
+        bootstrap.Modal.getInstance(dadosModal).hide();
+        mainContent.hidden = true;
+        successScreen.hidden = false;
+        setTimeout(function() {
+          window.location.href = '/';
+        }, 5000);
+      } else {
+        alert(result.error || 'Erro ao finalizar cadastro');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Finalizar';
+      }
+    })
+    .catch(function() {
+      alert('Erro de conexão. Tente novamente.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Finalizar';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

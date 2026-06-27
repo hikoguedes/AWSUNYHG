@@ -1,0 +1,520 @@
+/* ================= UNYCO CRM – LIGHT BRAND THEME =================
+   Baseado no estilo fornecido (azul-escuro, azul-claro, branco, cinza),
+   ajustado para os componentes do CRM (cards, tabelas, formulários, tabs, KPI).
+   ▶ Troque as variáveis abaixo pelos HEX da sua marca, se desejar.
+*/
+:root{
+  /* ======= PALETA (clara) ======= */
+  --azul-escuro: #2E6299;
+  --azul-claro:  #4DA3FF;
+  --cinza:       #F7F9FA;
+  --branco:      #FFFFFF;
+  --preto:       #0B1736;
+  --ink:         #1F2A44;       /* texto principal */
+  --ink-soft:    #53627C;       /* texto secundário */
+
+  /* ======= Semânticas ======= */
+  --success:#16A34A;
+  --warning:#F59E0B;
+  --danger: #EF4444;
+  --muted:  #6B7A96;
+
+  /* ======= Superfícies ======= */
+  --bg:        var(--cinza);
+  --panel:     #FFFFFF;         /* painéis/cartões */
+  --panel-alt: #F0F5FA;         /* áreas suaves */
+  --border:    rgba(28, 53, 87, .12);
+  --shadow:    0 10px 24px rgba(28, 53, 87, .10), 0 2px 8px rgba(28, 53, 87, .06);
+
+  /* ======= Raio/spacing/tempo ======= */
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+  --radius:    12px;
+  --spacing:   clamp(18px, 2vw, 28px);
+  --ts:        160ms cubic-bezier(.2,.8,.2,1);
+
+  /* ======= Densidade tabela ======= */
+  --table-density: 0.65rem;   /* altura de linha base (compact muda) */
+}
+
+/* ================= BASE E LAYOUT ================= */
+html { overflow-x:hidden; }
+body{
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  width:100%; margin:0; padding:0; overflow-x:hidden;
+}
+.crm-wrap{ padding: calc(var(--spacing) + 10px) 0 var(--spacing); }
+
+/* ================= NAVBAR ================= */
+.navbar{
+  background-color: var(--azul-escuro) !important;
+  border-bottom: 1px solid color-mix(in oklab, var(--azul-escuro) 30%, white 70%);
+  box-shadow: var(--shadow);
+  font-weight:600;
+}
+.navbar .navbar-brand{ width:150px; letter-spacing:.3px; text-transform:none; }
+.nav-link{ color: var(--branco) !important; }
+.nav-link:hover{ color: var(--azul-claro) !important; }
+
+/* ================= CARDS & KPI ================= */
+.card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.card .card-title{ font-weight:800; letter-spacing:.2px; color: var(--ink); }
+.card-muted{ background: var(--panel-alt); }
+
+.kpi{ display:flex; align-items:center; gap:14px; }
+.kpi .dot{
+  width:12px;height:12px;border-radius:50%;
+  background: var(--azul-claro);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--azul-claro) 22%, transparent);
+}
+.kpi .value{ font-size:1.6rem; font-weight:800; color:var(--azul-escuro); }
+.kpi .label{ color:var(--ink-soft); font-size:.92rem; }
+
+/* ================= TABS ================= */
+.nav-tabs{ border: none; gap: 6px; }
+.nav-tabs .nav-link{
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  border-radius: 999px;
+  background: #fff;
+  padding: 10px 16px;
+  transition: all var(--ts);
+}
+.nav-tabs .nav-link:hover{ color: var(--azul-escuro); transform: translateY(-1px); }
+.nav-tabs .nav-link.active{
+  color:#FFFFFF;
+  background: linear-gradient(135deg,var(--azul-claro) 0%, var(--azul-escuro) 100%);
+  border-color: transparent;
+  box-shadow: 0 8px 20px color-mix(in oklab, var(--azul-claro) 30%, transparent);
+}
+
+/* ================= TABLES ================= */
+.table{ color: var(--ink); --bs-table-bg: transparent; }
+.table thead th{
+  font-size:.82rem; text-transform: uppercase; letter-spacing:.06em;
+  color: var(--ink-soft); border-bottom: 1px solid var(--border); white-space: nowrap;
+}
+.table tbody tr{ border-top: 1px solid var(--border); transition: background var(--ts), transform var(--ts); }
+.table tbody tr:hover{ background: color-mix(in oklab, var(--azul-claro) 10%, white 90%); }
+.table td {
+  vertical-align: top; /* sobe o conteúdo para alinhar bem endereços multi-linha */
+  padding: calc(var(--table-density) + 0.4rem) 0.8rem; /* um pouquinho mais de respiro */
+  font-size: 0.92rem; /* deixa levemente mais compacto */
+  line-height: 1.4;   /* melhora leitura de múltiplas linhas */
+}
+
+.table th{ padding: calc(var(--table-density) + 0.15rem) 0.8rem; }
+
+/* >>> COMPACT MODE (mais linhas por tela) */
+.table-compact .table td,
+.table-compact .table th{ padding: calc(var(--table-density) - 0.25rem) 0.6rem; font-size: 0.92rem; }
+.table-compact .table{ border-radius: var(--radius-lg); }
+
+/* Badges */
+.badge{ border-radius: 999px; font-weight:700; letter-spacing:.02em; }
+.badge-dot{ display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px; }
+.badge.bg-success{ background: color-mix(in oklab, var(--success) 75%, white 25%) !important; }
+.badge.bg-secondary{ background: color-mix(in oklab, #9aa8c6 60%, white 40%) !important; color:#24324F; }
+
+/* ================= FORMS & CONTROLS ================= */
+.form-control, .form-select{
+  background: var(--cinza);
+  border:1px solid var(--border);
+  color: var(--ink);
+  border-radius: var(--radius);
+  padding:.65rem .9rem;
+  transition: border var(--ts), box-shadow var(--ts), transform var(--ts);
+}
+.form-control:focus, .form-select:focus{
+  border-color: color-mix(in oklab, var(--azul-claro) 70%, white 30%);
+  box-shadow: 0 0 0 5px color-mix(in oklab, var(--azul-claro) 22%, transparent);
+  transform: translateY(-1px);
+}
+.form-control::placeholder{ color: var(--muted); }
+
+/* Inputs com ícone à esquerda (compatível com .input-icon do seu site) */
+.input-icon{ position:relative; display:flex; align-items:center; }
+.input-icon svg{ position:absolute; left:10px; width:20px; height:20px; pointer-events:none; color: var(--ink-soft); opacity:.8; }
+.input-icon input{ padding-left: 40px; height: 42px; }
+
+/* ================= BUTTONS ================= */
+.btn{ border-radius: 45px; font-weight:700; letter-spacing:.02em; padding: 10px 24px; transition: transform var(--ts), box-shadow var(--ts), background var(--ts), color var(--ts); }
+.btn-primary{
+  background: linear-gradient(135deg,var(--azul-claro) 0%, var(--azul-escuro) 100%);
+  color: var(--branco); border: none;
+  box-shadow: 0 10px 24px color-mix(in oklab, var(--azul-claro) 28%, transparent);
+}
+.btn-primary:hover{ transform: translateY(-1px); }
+.btn-ghost{ background: transparent; border:1px dashed var(--border); color: var(--ink-soft); }
+.btn-ghost:hover{ border-style: solid; color: var(--ink); }
+
+/* Ações semânticas em outline (consistentes com o site) */
+.btn-outline-warning{ border-color: var(--warning); color: var(--warning); }
+.btn-outline-warning:hover{ background: var(--warning); color:#123; }
+.btn-outline-danger{ border-color: var(--danger); color: var(--danger); }
+.btn-outline-danger:hover{ background: var(--danger); color:#fff; }
+.btn-outline-secondary{ border-color: var(--muted); color: var(--muted); }
+.btn-outline-secondary:hover{ background: var(--muted); color:#fff; }
+
+/* ================= UTILITIES ================= */
+.hr{ height:1px; background: var(--border); margin: 10px 0 18px; }
+.text-soft{ color: var(--ink-soft) !important; }
+.text-muted-ux{ color: var(--muted) !important; }
+.round-xl{ border-radius: var(--radius-xl); }
+.shadow-ux{ box-shadow: var(--shadow); }
+.card-blend{ background: linear-gradient(180deg, #ffffff 0%, #F4F8FD 100%); }
+
+/* Empty state */
+.empty{ padding: 40px 20px; text-align: center; color: var(--ink-soft); border: 1px dashed var(--border); border-radius: var(--radius-xl); background: var(--panel); }
+
+/* ================= LISTAS / TABELAS ESPECIAIS DO CRM ================= */
+.list-toolbar{ display:flex; gap:10px; align-items:center; justify-content:space-between; margin-bottom:12px; }
+.list-toolbar .search{ min-width:280px; }
+.list-row{ border-radius: 14px; background:#fff; border:1px solid var(--border); padding:12px 14px; margin-bottom:10px; transition: box-shadow var(--ts), transform var(--ts); }
+.list-row:hover{ box-shadow: var(--shadow); transform: translateY(-1px); }
+
+/* ================= PAGINAÇÃO (variação circular) ================= */
+.pagination{ display:flex; justify-content:center; align-items:center; gap:10px; margin:20px 0; }
+.pagination .page-item{ margin:0; }
+.pagination .page-link{
+  width:40px; height:40px; border-radius:50% !important; background-color:#E9EEF5; color: var(--azul-escuro); border:none; display:flex; justify-content:center; align-items:center; font-weight:700; font-size:1.05rem; transition: background .2s, color .2s, transform var(--ts);
+}
+.pagination .page-item.active .page-link{ background: var(--azul-escuro); color: var(--branco); }
+.pagination .page-link:focus, .pagination .page-link:hover{ background: var(--azul-claro); color: var(--branco); transform: translateY(-1px); }
+.pagination .page-link[aria-label]{ background: var(--azul-claro); color: var(--branco); font-size:1.2rem; }
+.pagination .page-link[aria-label]:hover{ background: var(--azul-escuro); }
+
+/* ================= MODAIS (login/cadastro, detalhes) ================= */
+.modal-content{ border: none; border-radius: 24px; box-shadow: var(--shadow); }
+.modal__login{ background: var(--azul-escuro); color: var(--branco); border-radius: 24px; }
+.modal__cadastro{ border-radius: 24px; color: var(--branco); background-color: var(--azul-claro); }
+.modal__cadastro-form{ padding: 24px; margin: 10px 20px 0; border-radius: 24px 24px 0 0; }
+.modal__login-form{ background-color: color-mix(in oklab, var(--azul-escuro) 92%, white 8%); padding: 24px; margin:10px 20px 0; border-radius:24px 24px 0 0; }
+.btn-modal-login{ margin-bottom:20px; font-size:1.1em; padding: 8px 36px; }
+.btn-modal-cadastro{ margin-bottom:20px; font-size:1.1em; background-color: var(--azul-escuro); padding: 8px 36px; }
+
+/* ================= COMPONENTES ESPECÍFICOS CRM ================= */
+/* “Resumo” de lead/conta (cards horizontais) */
+.summary{ display:grid; grid-template-columns: repeat(12, 1fr); gap:12px; }
+.summary .block{ grid-column: span 4; background:#fff; border:1px solid var(--border); border-radius:16px; padding:14px; }
+.summary .block .label{ color:var(--ink-soft); font-size:.82rem; text-transform:uppercase; letter-spacing:.06em; }
+.summary .block .value{ color:var(--ink); font-weight:700; font-size:1.1rem; }
+@media(max-width: 991px){ .summary .block{ grid-column: span 6; } }
+@media(max-width: 576px){ .summary .block{ grid-column: span 12; } }
+
+/* Timeline de atividades */
+.timeline{ position:relative; padding-left:24px; }
+.timeline:before{ content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background: color-mix(in oklab, var(--azul-escuro) 30%, #DCE6F3 70%); border-radius:2px; }
+.timeline .item{ position:relative; padding:10px 0 10px 8px; }
+.timeline .item:before{ content:""; position:absolute; left:-4px; top:16px; width:10px; height:10px; border-radius:50%; background:var(--azul-claro); box-shadow:0 0 0 4px color-mix(in oklab, var(--azul-claro) 25%, transparent); }
+.timeline .item .title{ font-weight:700; color:var(--azul-escuro); }
+.timeline .item .meta{ color:var(--ink-soft); font-size:.88rem; }
+
+/* ================= ACESSIBILIDADE / FOCO ================= */
+:focus{ outline: none; }
+:focus-visible{ outline: 3px solid color-mix(in oklab, var(--azul-claro) 70%, white 30%); outline-offset: 2px; border-radius: 8px; }
+
+/* ================= ANIMAÇÕES SUAVES ================= */
+@keyframes floatUp { from { transform: translateY(6px); opacity:.0; } to { transform: translateY(0); opacity:1; } }
+.card, .table, .nav-tabs{ animation: floatUp .35s var(--ts); }
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 991px){ .card{ border-radius: 20px; } .navbar .navbar-brand{ font-size: 1rem; } }
+
+/* ================= OVERRIDES DO SITE (quando úteis no CRM) ================= */
+a{ text-decoration:none; color: var(--azul-escuro); }
+a:hover{ color: var(--azul-claro); text-decoration:none; }
+.hero__heading-span{ color: var(--azul-escuro) !important; }
+
+/* ================= UTILIDADE: modo compacto global ================= */
+/* Adicione .compact no <body> para reduzir paddings em tabelas/listas */
+body.compact{ --table-density: 0.4rem; }
+
+/* ====== GRID para KPIs ====== */
+.kpi-grid{
+  display:grid; gap:14px;
+  grid-template-columns: repeat(12,1fr);
+}
+.kpi-card{
+  grid-column: span 3;                /* 4 por linha desktop */
+  background:#fff; border:1px solid var(--border);
+  border-radius:16px; padding:16px 16px 14px;
+  box-shadow: var(--shadow);
+  transition: transform var(--ts), box-shadow var(--ts);
+}
+.kpi-card:hover{ transform: translateY(-2px); box-shadow: 0 14px 28px rgba(28,53,87,.12); }
+.kpi-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+.kpi-title{ font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
+.kpi-icon{
+  width:34px; height:34px; border-radius:10px; display:grid; place-items:center;
+  background: color-mix(in oklab, var(--azul-claro) 18%, white 82%);
+  color: var(--azul-escuro);
+}
+.kpi-value{ font-size:1.6rem; font-weight:800; color:var(--azul-escuro); line-height:1; }
+.kpi-sub{ color:var(--ink-soft); font-size:.9rem; }
+
+/* ====== Delta (variação) ====== */
+.kpi-delta{
+  display:inline-flex; align-items:center; gap:6px; font-weight:700; font-size:.9rem;
+  padding:4px 8px; border-radius:999px;
+}
+.kpi-delta.up{    color:#166534; background: color-mix(in oklab, #16a34a 18%, white 82%); }
+.kpi-delta.down{  color:#7f1d1d; background: color-mix(in oklab, #ef4444 18%, white 82%); }
+.kpi-delta svg{ width:14px; height:14px; }
+
+/* ====== Mini-graph (sparkline) ====== */
+.kpi-spark{ margin-top:8px; }
+.kpi-spark svg{ width:100%; height:42px; display:block; }
+.kpi-spark path{ fill: none; stroke: color-mix(in oklab, var(--azul-claro) 70%, var(--azul-escuro) 30%); stroke-width:2; }
+.kpi-spark .area{ fill: color-mix(in oklab, var(--azul-claro) 22%, white 78%); stroke: none; }
+
+/* ====== KPI anel (conic-gradient) ====== */
+.kpi-ring{
+  --value: 72;  /* % (0–100) — pode sobrescrever inline */
+  --size: 74px;
+  --track: #E9EEF5;
+  --grad: conic-gradient(var(--azul-claro) calc(var(--value)*1%), var(--track) 0);
+  width: var(--size); height: var(--size);
+  background: var(--grad);
+  border-radius: 50%; position:relative;
+  display:grid; place-items:center;
+}
+.kpi-ring:after{
+  content:""; position:absolute; inset:6px; background:#fff; border-radius:50%;
+}
+.kpi-ring .num{ position:relative; font-weight:800; color:var(--azul-escuro); }
+
+/* ====== KPI barra de progresso ====== */
+.kpi-progress{ height:10px; background:#E9EEF5; border-radius:999px; overflow:hidden; }
+.kpi-progress > i{
+  display:block; height:100%;
+  background: linear-gradient(90deg, var(--azul-claro), var(--azul-escuro));
+  width: 60%;  /* sobrescrever inline: style="width:85%" */
+}
+
+/* ====== Responsivo ====== */
+@media (max-width: 1200px){ .kpi-card{ grid-column: span 4; } } /* 3 por linha */
+@media (max-width: 768px){  .kpi-card{ grid-column: span 6; } } /* 2 por linha */
+@media (max-width: 560px){  .kpi-card{ grid-column: span 12; } }/* 1 por linha */
+
+/* Deixa o wrapper mais largo e com menos padding lateral */
+@media (min-width: 1200px){
+  .crm-wrap.container{
+    max-width: 1400px;          /* ajuste: 1360, 1440, 1500… */
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 1600px){
+  .crm-wrap.container{
+    max-width: 1500px;          /* opcional: cresce um pouco mais em telas grandes */
+  }
+}
+
+
+/* ===== Navbar melhorada ===== */
+.navbar-ux{
+  background-color: var(--azul-escuro) !important;
+  box-shadow: var(--shadow);
+}
+.navbar-ux .nav-link{ color: #fff; opacity:.9; }
+.navbar-ux .nav-link:hover{ color: var(--azul-claro); opacity:1; }
+
+/* Brand */
+.brand-ux .brand-logo{ height:26px; width:auto; margin-right:10px; display:block; }
+.brand-ux .brand-text{ color:#fff; font-weight:800; letter-spacing:.2px; }
+.brand-ux .brand-sufixo{ color: var(--azul-claro); font-weight:800; }
+
+/* User chip */
+.user-chip{
+  display:flex; align-items:center; gap:10px; border:none; background:#fff;
+  border-radius:999px; padding:6px 10px 6px 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+}
+.user-chip .avatar-img,
+.user-chip .avatar-initials{
+  width:32px; height:32px; border-radius:50%; flex:0 0 32px;
+}
+.user-chip .avatar-img{ object-fit:cover; display:block; }
+.user-chip .avatar-initials{
+  display:grid; place-items:center; color:#fff; font-weight:800;
+  background: radial-gradient(circle at 30% 30%, var(--azul-claro), var(--azul-escuro));
+}
+.user-chip .user-meta{ text-align:left; line-height:1.1; }
+.user-chip .user-name{ font-weight:700; color:#0b1736; }
+.user-chip .user-email{ color:#6b7a96; font-size:.85rem; }
+.user-chip .chev{ color:#6b7a96; margin-left:2px; }
+
+/* Dropdown */
+.dropdown-menu{ border-radius:14px; padding:.4rem; }
+.dropdown-item{ border-radius:8px; }
+.dropdown-item:hover{ background: color-mix(in oklab, var(--azul-claro) 15%, white 85%); }
+
+/* brand (logo + CRM) */
+.brand-ux .logo-svg{ height:26px; width:auto; display:block; color:#fff; } /* logo branca */
+.crm-tag{
+  color: #959ba3; /* cinza claro */
+  font-weight:800;
+  letter-spacing:.08em;
+  padding:4px 10px;
+  border-radius:999px;
+  background: rgba(255,255,255,.12);
+  line-height:1;
+}
+
+
+/* chip do usuário (nome + avatar + dropdown) */
+.user-chip{
+  display:flex; align-items:center; gap:10px; border:none; background:#fff;
+  border-radius:999px; padding:6px 10px 6px 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+}
+.user-chip .avatar-img,.user-chip .avatar-initials{
+  width:32px; height:32px; border-radius:50%; flex:0 0 32px;
+}
+.user-chip .avatar-img{ object-fit:cover; display:block; }
+.user-chip .avatar-initials{
+  display:grid; place-items:center; color:#fff; font-weight:800;
+  background: radial-gradient(circle at 30% 30%, var(--azul-claro), var(--azul-escuro));
+}
+.user-chip .user-meta{ text-align:left; line-height:1.1; }
+.user-chip .user-name{ font-weight:700; color:#0b1736; }
+.user-chip .user-email{ color:#6b7a96; font-size:.85rem; }
+.user-chip .chev{ color:#6b7a96; margin-left:2px; }
+
+/* navbar */
+.navbar-ux{ background: var(--azul-escuro) !important; box-shadow: var(--shadow); }
+.navbar-ux .nav-link{ color:#fff; opacity:.9; }
+.navbar-ux .nav-link:hover{ color: var(--azul-claro); opacity:1; }
+.dropdown-menu{ border-radius:14px; padding:.4rem; }
+.dropdown-item{ border-radius:8px; }
+.dropdown-item:hover{ background: color-mix(in oklab, var(--azul-claro) 15%, white 85%); }
+
+
+/* LOGO + CRM na navbar */
+.brand-ux .logo-svg{
+  height: 28px;   /* ajuste o tamanho conforme desejar */
+  width: auto;
+  display: block;
+}
+.crm-tag{
+  color: var(--azul-claro);
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: .05em;
+}
+
+/* Brand: logo + "CRM" alinhados */
+.navbar .navbar-brand.brand-ux{
+  display:flex; align-items:center; gap:10px;
+  padding-top:0; padding-bottom:0;
+  line-height:1;
+}
+.brand-ux .logo-svg{ height:28px; width:auto; display:block; } /* ajuste a altura aqui */
+.crm-tag{
+  color: var(--azul-claro);
+  font-weight:800; letter-spacing:.06em;
+  font-size:1.1rem; line-height:1;
+}
+
+
+.badge-plan {
+  background: linear-gradient(135deg, var(--azul-claro), var(--azul-escuro));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  display: inline-flex;
+  align-items: center;       /* centraliza vertical */
+  justify-content: center;   /* centraliza horizontal */
+  text-align: center;        /* centraliza quando quebra */
+  line-height: 1.3;          /* melhora leitura da quebra */
+  white-space: normal;       /* permite quebra */
+  max-width: 160px;          /* evita que estoure demais */
+  word-break: break-word;    /* quebra palavras longas */
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.badge-plan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.18);
+}
+
+
+
+/* Badge de status (ativo/inativo) */
+.badge-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-left: 6px;
+}
+.badge-status.active {
+  background: var(--success);
+  color: #fff;
+}
+.badge-status.inactive {
+  background: var(--muted);
+  color: #fff;
+}
+
+/* Chip de status */
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.status-chip.active { background: #198754; }     /* verde */
+.status-chip.pending { background: #ffc107; }   /* amarelo */
+.status-chip.cancelled { background: #dc3545; } /* vermelho */
+.status-chip.expired { background: #6c757d; }   /* cinza */
+.status-chip.inactive { background: #adb5bd; }  /* cinza claro */
+
+
+/* === Tabs CRM Degradê === */
+.nav-tabs {
+  border: none;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.6rem;
+  font-weight: 600;
+  color: #334155 !important;
+  background: #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.nav-tabs .nav-link:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+/* Ativo com degradê */
+.nav-tabs .nav-link.active {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); /* azul degradê */
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+  transform: translateY(-2px) scale(1.05);
+}
+

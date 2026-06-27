@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+.env
+.gemini
+dist/assets/*.fixed
+dist/assets/*.bak
+*.bak
