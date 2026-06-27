@@ -163,10 +163,10 @@ if (content.includes(handlersTarget)) {
 
 // 6.1 Hotel Card Wrapper & Button
 const hotelWrapperTarget = 'T.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-amber-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col justify-between transition-all glass",children:[e.jsxs("div"';
-const hotelWrapperRepl = 'T.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-amber-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col justify-between transition-all glass",style:{position:"relative",borderColor:(h==null?void 0:h.id)===s.id?"#10b981":"",borderWidth:(h==null?void 0:h.id)===s.id?"2px":""},children:[(h==null?void 0:h.id)===s.id&&e.jsx("span",{className:"absolute top-3 left-3 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#10b981"},children:"SELECIONADO"}),e.jsxs("div"';
+const hotelWrapperRepl = 'T.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-amber-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col justify-between transition-all glass",style:{position:"relative",borderColor:(h==null?void 0:h.id)===s.id?"#0d7e68":"",borderWidth:(h==null?void 0:h.id)===s.id?"2px":""},children:[(h==null?void 0:h.id)===s.id&&e.jsx("span",{className:"absolute top-3 left-3 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#0d7e68"},children:"SELECIONADO"}),e.jsxs("div"';
 
 const hotelBtnTarget = 'e.jsx("button",{onClick:n=>as(s,n),className:`px-4 py-2 rounded-xl text-xs font-bold transition-all font-display ${(h==null?void 0:h.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#f59e0b] hover:bg-[#d97706] text-white shadow-md shadow-amber-100 font-display"}`,children:(h==null?void 0:h.id)===s.id?"Selecionado":"Selecionar"})';
-const hotelBtnRepl = 'e.jsx("button",{onClick:n=>as(s,n),className:`px-4 py-2 rounded-xl text-xs font-bold transition-all font-display ${(h==null?void 0:h.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-[#f59e0b] hover:bg-[#d97706] text-white shadow-md shadow-amber-100 font-display"}`,style:{backgroundColor:(h==null?void 0:h.id)===s.id?"#ef4444":""},children:(h==null?void 0:h.id)===s.id?"Cancelar":"Selecionar"})';
+const hotelBtnRepl = 'e.jsx("button",{onClick:n=>as(s,n),className:`px-4 py-2 rounded-xl text-xs font-bold transition-all font-display ${(h==null?void 0:h.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-gradient-to-r from-[#a78235] to-[#dfba6b] hover:brightness-105 text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(h==null?void 0:h.id)===s.id?"#ef4444":""},children:(h==null?void 0:h.id)===s.id?"Cancelar":"Selecionar"})';
 
 if (content.includes(hotelWrapperTarget) && content.includes(hotelBtnTarget)) {
   content = content.replace(hotelWrapperTarget, hotelWrapperRepl).replace(hotelBtnTarget, hotelBtnRepl);
@@ -178,10 +178,10 @@ if (content.includes(hotelWrapperTarget) && content.includes(hotelBtnTarget)) {
 
 // 6.2 Car Card Wrapper & Button
 const carWrapperTarget = 'le.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-sky-400 hover:shadow-lg rounded-3xl p-4 flex flex-col justify-between h-[375px] transition-all glass",children:[e.jsxs("div"';
-const carWrapperRepl = 'le.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-sky-400 hover:shadow-lg rounded-3xl p-4 flex flex-col justify-between h-[375px] transition-all glass",style:{position:"relative",borderColor:(x==null?void 0:x.id)===s.id?"#10b981":"",borderWidth:(x==null?void 0:x.id)===s.id?"2px":""},children:[(x==null?void 0:x.id)===s.id&&e.jsx("span",{className:"absolute top-6 left-6 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#10b981"},children:"SELECIONADO"}),e.jsxs("div"';
+const carWrapperRepl = 'le.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-sky-400 hover:shadow-lg rounded-3xl p-4 flex flex-col justify-between h-[375px] transition-all glass",style:{position:"relative",borderColor:(x==null?void 0:x.id)===s.id?"#0d7e68":"",borderWidth:(x==null?void 0:x.id)===s.id?"2px":""},children:[(x==null?void 0:x.id)===s.id&&e.jsx("span",{className:"absolute top-6 left-6 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#0d7e68"},children:"SELECIONADO"}),e.jsxs("div"';
 
 const carBtnTarget = 'e.jsx("button",{onClick:n=>is(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(x==null?void 0:x.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-md shadow-sky-100 font-display"}`,children:(x==null?void 0:x.id)===s.id?"Selecionado":"Selecionar"})';
-const carBtnRepl = 'e.jsx("button",{onClick:n=>is(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(x==null?void 0:x.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-md shadow-sky-100 font-display"}`,style:{backgroundColor:(x==null?void 0:x.id)===s.id?"#ef4444":""},children:(x==null?void 0:x.id)===s.id?"Cancelar":"Selecionar"})';
+const carBtnRepl = 'e.jsx("button",{onClick:n=>is(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(x==null?void 0:x.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-gradient-to-r from-[#a78235] to-[#dfba6b] hover:brightness-105 text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(x==null?void 0:x.id)===s.id?"#ef4444":""},children:(x==null?void 0:x.id)===s.id?"Cancelar":"Selecionar"})';
 
 if (content.includes(carWrapperTarget) && content.includes(carBtnTarget)) {
   content = content.replace(carWrapperTarget, carWrapperRepl).replace(carBtnTarget, carBtnRepl);
@@ -193,10 +193,10 @@ if (content.includes(carWrapperTarget) && content.includes(carBtnTarget)) {
 
 // 6.3 Flight Card Wrapper & Button
 const flightWrapperTarget = 'te.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-indigo-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",children:[s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.airline,className:"w-full h-full object-cover"})})';
-const flightWrapperRepl = 'te.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-indigo-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(d==null?void 0:d.id)===s.id?"#10b981":"",borderWidth:(d==null?void 0:d.id)===s.id?"2px":""},children:[(d==null?void 0:d.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#10b981"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.airline,className:"w-full h-full object-cover"})})';
+const flightWrapperRepl = 'te.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-indigo-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(d==null?void 0:d.id)===s.id?"#0d7e68":"",borderWidth:(d==null?void 0:d.id)===s.id?"2px":""},children:[(d==null?void 0:d.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#0d7e68"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.airline,className:"w-full h-full object-cover"})})';
 
 const flightBtnTarget = 'e.jsx("button",{onClick:n=>rs(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(d==null?void 0:d.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#6366f1] hover:bg-[#4f46e5] text-white shadow-md shadow-indigo-100 font-display"}`,children:(d==null?void 0:d.id)===s.id?"Selecionado":"Selecionar"})';
-const flightBtnRepl = 'e.jsx("button",{onClick:n=>rs(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(d==null?void 0:d.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-[#6366f1] hover:bg-[#4f46e5] text-white shadow-md shadow-indigo-100 font-display"}`,style:{backgroundColor:(d==null?void 0:d.id)===s.id?"#ef4444":""},children:(d==null?void 0:d.id)===s.id?"Cancelar":"Selecionar"})';
+const flightBtnRepl = 'e.jsx("button",{onClick:n=>rs(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(d==null?void 0:d.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-gradient-to-r from-[#a78235] to-[#dfba6b] hover:brightness-105 text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(d==null?void 0:d.id)===s.id?"#ef4444":""},children:(d==null?void 0:d.id)===s.id?"Cancelar":"Selecionar"})';
 
 if (content.includes(flightWrapperTarget) && content.includes(flightBtnTarget)) {
   content = content.replace(flightWrapperTarget, flightWrapperRepl).replace(flightBtnTarget, flightBtnRepl);
@@ -208,10 +208,10 @@ if (content.includes(flightWrapperTarget) && content.includes(flightBtnTarget)) 
 
 // 6.4 Bus Card Wrapper & Button
 const busWrapperTarget = 'L.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-pink-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",children:[s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.provider,className:"w-full h-full object-cover"})})';
-const busWrapperRepl = 'L.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-pink-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(m==null?void 0:m.id)===s.id?"#10b981":"",borderWidth:(m==null?void 0:m.id)===s.id?"2px":""},children:[(m==null?void 0:m.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#10b981"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.provider,className:"w-full h-full object-cover"})})';
+const busWrapperRepl = 'L.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-pink-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(m==null?void 0:m.id)===s.id?"#0d7e68":"",borderWidth:(m==null?void 0:m.id)===s.id?"2px":""},children:[(m==null?void 0:m.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#0d7e68"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.provider,className:"w-full h-full object-cover"})})';
 
 const busBtnTarget = 'e.jsx("button",{onClick:n=>ns(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(m==null?void 0:m.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#ec4899] hover:bg-[#db2777] text-white shadow-md shadow-pink-100 font-display"}`,children:(m==null?void 0:m.id)===s.id?"Selecionado":"Selecionar"})';
-const busBtnRepl = 'e.jsx("button",{onClick:n=>ns(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(m==null?void 0:m.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-[#ec4899] hover:bg-[#db2777] text-white shadow-md shadow-pink-100 font-display"}`,style:{backgroundColor:(m==null?void 0:m.id)===s.id?"#ef4444":""},children:(m==null?void 0:m.id)===s.id?"Cancelar":"Selecionar"})';
+const busBtnRepl = 'e.jsx("button",{onClick:n=>ns(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(m==null?void 0:m.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-gradient-to-r from-[#a78235] to-[#dfba6b] hover:brightness-105 text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(m==null?void 0:m.id)===s.id?"#ef4444":""},children:(m==null?void 0:m.id)===s.id?"Cancelar":"Selecionar"})';
 
 if (content.includes(busWrapperTarget) && content.includes(busBtnTarget)) {
   content = content.replace(busWrapperTarget, busWrapperRepl).replace(busBtnTarget, busBtnRepl);
@@ -223,10 +223,10 @@ if (content.includes(busWrapperTarget) && content.includes(busBtnTarget)) {
 
 // 6.5 Insurance Card Wrapper & Button
 const insWrapperTarget = 'z.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-rose-400 hover:shadow-lg rounded-3xl p-5 flex flex-col justify-between h-[320px] transition-all glass",children:[e.jsxs("div",{className:"space-y-2",children:[e.jsx("div",{className:"w-10 h-10 bg-rose-50 rounded-xl flex items-center justify-center text-[#f43f5e] border border-rose-100",children:e.jsx(we,{className:"w-5 h-5"})}),e.jsx("h3",{className:"font-bold text-slate-855 text-xs leading-tight font-display",children:s.planName||s.name})';
-const insWrapperRepl = 'z.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-rose-400 hover:shadow-lg rounded-3xl p-5 flex flex-col justify-between h-[320px] transition-all glass",style:{position:"relative",borderColor:(p==null?void 0:p.id)===s.id?"#10b981":"",borderWidth:(p==null?void 0:p.id)===s.id?"2px":""},children:[(p==null?void 0:p.id)===s.id&&e.jsx("span",{className:"absolute top-5 right-5 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#10b981"},children:"SELECIONADO"}),e.jsxs("div",{className:"space-y-2",children:[e.jsx("div",{className:"w-10 h-10 bg-rose-50 rounded-xl flex items-center justify-center text-[#f43f5e] border border-rose-100",children:e.jsx(we,{className:"w-5 h-5"})}),e.jsx("h3",{className:"font-bold text-slate-855 text-xs leading-tight font-display",children:s.planName||s.name})';
+const insWrapperRepl = 'z.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-rose-400 hover:shadow-lg rounded-3xl p-5 flex flex-col justify-between h-[320px] transition-all glass",style:{position:"relative",borderColor:(p==null?void 0:p.id)===s.id?"#0d7e68":"",borderWidth:(p==null?void 0:p.id)===s.id?"2px":""},children:[(p==null?void 0:p.id)===s.id&&e.jsx("span",{className:"absolute top-5 right-5 text-white text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20",style:{backgroundColor:"#0d7e68"},children:"SELECIONADO"}),e.jsxs("div",{className:"space-y-2",children:[e.jsx("div",{className:"w-10 h-10 bg-rose-50 rounded-xl flex items-center justify-center text-[#f43f5e] border border-rose-100",children:e.jsx(we,{className:"w-5 h-5"})}),e.jsx("h3",{className:"font-bold text-slate-855 text-xs leading-tight font-display",children:s.planName||s.name})';
 
 const insBtnTarget = 'e.jsx("button",{onClick:n=>os(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(p==null?void 0:p.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#f43f5e] hover:bg-[#e11d48] text-white shadow-md shadow-rose-100 font-display"}`,children:(p==null?void 0:p.id)===s.id?"Contratado":"Contratar"})';
-const insBtnRepl = 'e.jsx("button",{onClick:n=>os(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(p==null?void 0:p.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-[#f43f5e] hover:bg-[#e11d48] text-white shadow-md shadow-rose-100 font-display"}`,style:{backgroundColor:(p==null?void 0:p.id)===s.id?"#ef4444":""},children:(p==null?void 0:p.id)===s.id?"Cancelar":"Contratar"})';
+const insBtnRepl = 'e.jsx("button",{onClick:n=>os(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(p==null?void 0:p.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"bg-gradient-to-r from-[#a78235] to-[#dfba6b] hover:brightness-105 text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(p==null?void 0:p.id)===s.id?"#ef4444":""},children:(p==null?void 0:p.id)===s.id?"Cancelar":"Contratar"})';
 
 if (content.includes(insWrapperTarget) && content.includes(insBtnTarget)) {
   content = content.replace(insWrapperTarget, insWrapperRepl).replace(insBtnTarget, insBtnRepl);
@@ -301,23 +301,43 @@ if (content.includes(beTarget) && content.includes(modalNightsLabelTarget) && co
 const mainWrapperTarget = 'e.jsx("main",{className:"flex-1 min-w-0 overflow-y-auto bg-[#f8fafc] p-4 lg:p-6 space-y-5",children:e.jsxs("div",{className:"w-full space-y-5",children:[';
 const mainWrapperRepl = 'e.jsx("main",{className:"flex-1 min-w-0 h-screen overflow-hidden flex flex-col bg-[#f8fafc] p-4 lg:p-6 space-y-4",children:e.jsxs("div",{className:"w-full flex-1 min-h-0 flex flex-col space-y-4 overflow-hidden",children:[';
 
-const gridContainerTarget = 'e.jsxs("div",{className:"grid grid-cols-1 xl:grid-cols-12 gap-4 items-start",children:[';
-const gridContainerRepl = 'e.jsxs("div",{className:"grid grid-cols-1 xl:grid-cols-12 gap-4 items-stretch flex-1 min-h-0 overflow-hidden",children:[';
-
 const leftTimelineTarget = 'e.jsxs("section",{className:"xl:col-span-3 space-y-4",children:[';
 const leftTimelineRepl = 'e.jsxs("section",{className:"xl:col-span-3 space-y-4 h-full overflow-y-auto pr-1",children:[';
 
 const middleResultsTarget = 'e.jsxs("section",{className:"xl:col-span-6 space-y-6",children:[';
 const middleResultsRepl = 'e.jsxs("section",{className:"xl:col-span-6 space-y-6 h-full overflow-y-auto pr-1",onScroll:(g)=>{const{scrollTop:k,scrollHeight:T,clientHeight:le}=g.currentTarget;T-k-le<15&&!A&&r<5&&(!window._lastStepTransition||Date.now()-window._lastStepTransition>1200)&&(window._lastStepTransition=Date.now(),c(r+1))},children:[';
 
-if (content.includes(mainWrapperTarget) && content.includes(gridContainerTarget) && content.includes(leftTimelineTarget) && content.includes(middleResultsTarget)) {
+if (content.includes(mainWrapperTarget) && content.includes(leftTimelineTarget) && content.includes(middleResultsTarget)) {
   content = content.replace(mainWrapperTarget, mainWrapperRepl)
-                   .replace(gridContainerTarget, gridContainerRepl)
                    .replace(leftTimelineTarget, leftTimelineRepl)
                    .replace(middleResultsTarget, middleResultsRepl);
   console.log('11. FIXED VIEWPORT LAYOUT & SCROLL-TO-ADVANCE: SUCCESS');
 } else {
   console.error('11. FIXED VIEWPORT LAYOUT & SCROLL-TO-ADVANCE targets not found');
+  process.exit(1);
+}
+
+// 5.12 Patch 12: Premium Gold Theme and Timeline Styling
+const buscarBtnTarget = 'e.jsxs("button",{type:"submit",className:"w-full bg-[#6366f1] hover:bg-[#4f46e5] text-white font-black text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/10 font-display",children:[e.jsx(De,{className:"w-3.5 h-3.5"})," Buscar"]})';
+const buscarBtnRepl = 'e.jsxs("button",{type:"submit",className:"w-full bg-gradient-to-r from-[#a78235] to-[#dfba6b] hover:brightness-105 text-slate-900 font-black text-xs py-3 rounded-xl transition flex items-center justify-center gap-2 shadow-lg font-display",children:[e.jsx(De,{className:"w-3.5 h-3.5 text-slate-900"})," Buscar"]})';
+
+const timelineCardsTarget = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${h?"bg-emerald-50/80 border-[#10b981]/30 hover:border-[#10b981]":r===1?"bg-white border-[#f59e0b] shadow-md ring-2 ring-amber-50/50":"bg-white border-[#e2e8f0] opacity-70 hover:opacity-100 shadow-sm glass"}`';
+const timelineCardsRepl = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${h?"bg-amber-50/10 border-[#a78235]/30 hover:border-[#a78235]":r===1?"bg-white border-[#dfba6b] shadow-md ring-2 ring-amber-50/50":"bg-white border-[#e2e8f0] opacity-70 hover:opacity-100 shadow-sm glass"}`';
+
+const timelineNodesTarget = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${h?"bg-[#10b981] text-white border-2 border-white shadow-md":r===1?"bg-[#f59e0b] text-white border-2 border-white ring-4 ring-amber-50":"bg-white text-slate-400 border border-[#e2e8f0]"}`';
+const timelineNodesRepl = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${h?"bg-[#a78235] text-white border-2 border-white shadow-md":r===1?"bg-[#dfba6b] text-slate-900 border-2 border-white ring-4 ring-amber-50/50":"bg-white text-slate-400 border border-[#e2e8f0]"}`';
+
+const bonusBoxTarget = 'e.jsxs("div",{className:"pt-2 border-t border-[#e2e8f0]",children:[e.jsx("span",{className:"text-[10px] text-slate-400 font-semibold block leading-none",children:"Seu Bônus Acumulado:"}),e.jsxs("span",{className:"text-2xl font-black text-[#10b981] block mt-1",children:["R$ ",he,",00"]}),';
+const bonusBoxRepl = 'e.jsxs("div",{className:"p-3 bg-amber-50/10 border border-[#a78235]/40 rounded-xl mt-3",children:[e.jsx("span",{className:"text-[10px] text-slate-400 font-semibold block leading-none",children:"Seu Bônus Acumulado:"}),e.jsxs("span",{className:"text-xl font-black text-slate-800 block mt-1.5",children:["R$ ",he,",00"]}),';
+
+if (content.includes(buscarBtnTarget) && content.includes(timelineCardsTarget) && content.includes(timelineNodesTarget) && content.includes(bonusBoxTarget)) {
+  content = content.replace(buscarBtnTarget, buscarBtnRepl)
+                   .replace(timelineCardsTarget, timelineCardsRepl)
+                   .replace(timelineNodesTarget, timelineNodesRepl)
+                   .replace(bonusBoxTarget, bonusBoxRepl);
+  console.log('12. PREMIUM GOLD THEME & TIMELINE STYLING: SUCCESS');
+} else {
+  console.error('12. PREMIUM GOLD THEME & TIMELINE STYLING targets not found');
   process.exit(1);
 }
 
