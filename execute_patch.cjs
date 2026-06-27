@@ -129,7 +129,7 @@ const auditoriaCall = auditoriaTarget.substring(1).slice(0, -3);
 const newDivCall = 'e.jsx("div",{className:"bg-white border border-[#e2e8f0] rounded-3xl p-6 shadow-sm glass",children:e.jsxs("div",{className:"flex items-center justify-between",children:[e.jsxs("div",{children:[e.jsx("span",{className:"text-[9px] text-slate-400 font-bold block uppercase leading-none",children:"Total Geral"}),e.jsxs("span",{className:"text-xl font-black text-slate-800 font-display mt-1.5 block",children:["R$ ",be().toLocaleString("pt-BR"),",00"]})]}),e.jsx("button",{onClick:()=>re(!0),className:"px-4 py-2.5 bg-[#6366f1] hover:bg-[#4f46e5] text-white font-black text-xs rounded-xl shadow-md transition-all font-display",children:"Reservar Pacote"})]})})';
 
 // New section call containing ONLY Auditoria (balanced) since checkout card was moved to the top stepper
-const newSectionCall = `e.jsx("section",{className:"xl:col-span-3 space-y-6",children:${auditoriaCall}})`;
+const newSectionCall = `e.jsx("section",{className:"xl:col-span-3 space-y-6 h-full overflow-y-auto pr-1",children:${auditoriaCall}})`;
 
 content = content.replace(originalSectionCall, newSectionCall);
 console.log('3. MOVE AUDITORIA & SIMPLIFY CARD: SUCCESS');
@@ -294,6 +294,30 @@ if (content.includes(beTarget) && content.includes(modalNightsLabelTarget) && co
   console.log('10. DYNAMIC HOTEL NIGHTS AND SUBTOTALS: SUCCESS');
 } else {
   console.error('10. DYNAMIC HOTEL NIGHTS AND SUBTOTALS targets not found');
+  process.exit(1);
+}
+
+// 5.11 Patch 11: Fixed Viewport Layout and Scroll-to-Advance Transitions
+const mainWrapperTarget = 'e.jsx("main",{className:"flex-1 min-w-0 overflow-y-auto bg-[#f8fafc] p-4 lg:p-6 space-y-5",children:e.jsxs("div",{className:"w-full space-y-5",children:[';
+const mainWrapperRepl = 'e.jsx("main",{className:"flex-1 min-w-0 h-screen overflow-hidden flex flex-col bg-[#f8fafc] p-4 lg:p-6 space-y-4",children:e.jsxs("div",{className:"w-full flex-1 min-h-0 flex flex-col space-y-4 overflow-hidden",children:[';
+
+const gridContainerTarget = 'e.jsxs("div",{className:"grid grid-cols-1 xl:grid-cols-12 gap-4 items-start",children:[';
+const gridContainerRepl = 'e.jsxs("div",{className:"grid grid-cols-1 xl:grid-cols-12 gap-4 items-stretch flex-1 min-h-0 overflow-hidden",children:[';
+
+const leftTimelineTarget = 'e.jsxs("section",{className:"xl:col-span-3 space-y-4",children:[';
+const leftTimelineRepl = 'e.jsxs("section",{className:"xl:col-span-3 space-y-4 h-full overflow-y-auto pr-1",children:[';
+
+const middleResultsTarget = 'e.jsxs("section",{className:"xl:col-span-6 space-y-6",children:[';
+const middleResultsRepl = 'e.jsxs("section",{className:"xl:col-span-6 space-y-6 h-full overflow-y-auto pr-1",onScroll:(g)=>{const{scrollTop:k,scrollHeight:T,clientHeight:le}=g.currentTarget;T-k-le<15&&!A&&r<5&&(!window._lastStepTransition||Date.now()-window._lastStepTransition>1200)&&(window._lastStepTransition=Date.now(),c(r+1))},children:[';
+
+if (content.includes(mainWrapperTarget) && content.includes(gridContainerTarget) && content.includes(leftTimelineTarget) && content.includes(middleResultsTarget)) {
+  content = content.replace(mainWrapperTarget, mainWrapperRepl)
+                   .replace(gridContainerTarget, gridContainerRepl)
+                   .replace(leftTimelineTarget, leftTimelineRepl)
+                   .replace(middleResultsTarget, middleResultsRepl);
+  console.log('11. FIXED VIEWPORT LAYOUT & SCROLL-TO-ADVANCE: SUCCESS');
+} else {
+  console.error('11. FIXED VIEWPORT LAYOUT & SCROLL-TO-ADVANCE targets not found');
   process.exit(1);
 }
 
