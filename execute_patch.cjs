@@ -336,32 +336,83 @@ if (content.includes(buscarBtnTarget) && content.includes(bonusBoxTarget) && con
 
   // Safe loop replacements for all 5 timeline steps cards, nodes, icons, and titles
   const stepsData = [
-    { variable: 'h', step: 1 },
-    { variable: 'x', step: 2 },
-    { variable: 'd', step: 3 },
-    { variable: 'm', step: 4 },
-    { variable: 'p', step: 5 }
+    { 
+      variable: 'h', 
+      step: 1, 
+      activeBorder: 'border-[#f59e0b]', 
+      activeRing: 'ring-amber-50/50', 
+      activeNodeBg: 'bg-[#f59e0b]', 
+      activeNodeRing: 'ring-4 ring-amber-50',
+      activeIconBg: 'bg-amber-500 text-white',
+      activeTitleColor: 'text-amber-600'
+    },
+    { 
+      variable: 'x', 
+      step: 2, 
+      activeBorder: 'border-[#0ea5e9]', 
+      activeRing: 'ring-sky-50/50', 
+      activeNodeBg: 'bg-[#0ea5e9]', 
+      activeNodeRing: 'ring-4 ring-sky-50',
+      activeIconBg: 'bg-[#0ea5e9] text-white',
+      activeTitleColor: 'text-sky-600'
+    },
+    { 
+      variable: 'd', 
+      step: 3, 
+      activeBorder: 'border-[#6366f1]', 
+      activeRing: 'ring-indigo-50/50', 
+      activeNodeBg: 'bg-[#6366f1]', 
+      activeNodeRing: 'ring-4 ring-indigo-50',
+      activeIconBg: 'bg-[#6366f1] text-white',
+      activeTitleColor: 'text-indigo-600'
+    },
+    { 
+      variable: 'm', 
+      step: 4, 
+      activeBorder: 'border-[#ec4899]', 
+      activeRing: 'ring-pink-50/50', 
+      activeNodeBg: 'bg-[#ec4899]', 
+      activeNodeRing: 'ring-4 ring-pink-50',
+      activeIconBg: 'bg-[#ec4899] text-white',
+      activeTitleColor: 'text-pink-600'
+    },
+    { 
+      variable: 'p', 
+      step: 5, 
+      activeBorder: 'border-[#f43f5e]', 
+      activeRing: 'ring-rose-50/50', 
+      activeNodeBg: 'bg-[#f43f5e]', 
+      activeNodeRing: 'ring-4 ring-rose-50',
+      activeIconBg: 'bg-[#f43f5e] text-white',
+      activeTitleColor: 'text-rose-600'
+    }
   ];
+
   for (const s of stepsData) {
-    // All cards get a gold border (darker for completed, medium for active/pending)
-    const cardTarget = `className:\`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 \\\${${s.variable}?"bg-emerald-50/80 border-[#10b981]/30 hover:border-[#10b981]":r===${s.step}?"bg-white border-[#f59e0b] shadow-md ring-2 ring-amber-50/50":"bg-white border-[#e2e8f0] opacity-70 hover:opacity-100 shadow-sm glass"}\``;
-    const cardRepl = `className:\`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 \\\${${s.variable}?"bg-white hover:border-amber-700":r===${s.step}?"bg-white shadow-md ring-2 ring-amber-50/50":"bg-white opacity-70 hover:opacity-100 shadow-sm glass"}\`,style:{borderColor:${s.variable}?"#a78235":r===${s.step}?"#dfba6b":"#dfba6b",borderWidth:"1px"}`;
-    content = content.replace(cardTarget, cardRepl);
+    const cardTarget = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-emerald-50/80 border-[#10b981]/30 hover:border-[#10b981]":r===' + s.step + '?"bg-white ' + s.activeBorder + ' shadow-md ring-2 ' + s.activeRing + '":"bg-white border-[#e2e8f0] opacity-70 hover:opacity-100 shadow-sm glass"}`';
+    const cardRepl = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-white hover:border-amber-700":r===' + s.step + '?"bg-white shadow-md ring-2 ring-amber-50/50":"bg-white opacity-70 hover:opacity-100 shadow-sm glass"}`,style:{borderColor:' + s.variable + '?"#a78235":r===' + s.step + '?"#dfba6b":"#dfba6b",borderWidth:"1px"}';
+    content = content.replaceAll(cardTarget, cardRepl);
 
-    // All timeline nodes (circles) are silver-gray
-    const nodeTarget = `className:\`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display \\\${${s.variable}?"bg-[#10b981] text-white border-2 border-white shadow-md":r===${s.step}?"bg-[#f59e0b] text-white border-2 border-white ring-4 ring-amber-50":"bg-white text-slate-400 border border-[#e2e8f0]"}\``;
-    const nodeRepl = `className:\`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display \\\${${s.variable}?"text-slate-900 shadow-sm":r===${s.step}?"text-slate-900 ring-4 ring-slate-100":"text-slate-400 border border-[#cbd5e1]"}\`,style:{backgroundColor:"#ffffff",borderColor:"#cbd5e1",borderWidth:"2px"}`;
-    content = content.replace(nodeTarget, nodeRepl);
+    const nodeTarget = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${' + s.variable + '?"bg-[#10b981] text-white border-2 border-white shadow-md":r===' + s.step + '?"' + s.activeNodeBg + ' text-white border-2 border-white ' + s.activeNodeRing + '":"bg-white text-slate-400 border border-[#e2e8f0]"}`';
+    const nodeRepl = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${' + s.variable + '?"text-slate-900 shadow-sm":r===' + s.step + '?"text-slate-900 ring-4 ring-slate-100":"text-slate-400 border border-[#cbd5e1]"}`,style:{backgroundColor:"#ffffff",borderColor:"#cbd5e1",borderWidth:"2px"}';
+    content = content.replaceAll(nodeTarget, nodeRepl);
 
-    // All step icons get light gray background (#f1f5f9) and chumbo/silver colors
-    const iconTarget = `className:\`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition \\\${${s.variable}?"bg-[#10b981] text-white":r===${s.step}?"bg-amber-500 text-white":"bg-slate-50 text-slate-400"}\``;
-    const iconRepl = `className:\`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition \\\${${s.variable}?"text-[#475569]":r===${s.step}?"text-[#475569]":"text-[#cbd5e1]"}\`,style:{backgroundColor:"#f1f5f9"}`;
-    content = content.replace(iconTarget, iconRepl);
+    const iconTarget = 'className:`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition ${' + s.variable + '?"bg-[#10b981] text-white":r===' + s.step + '?"' + s.activeIconBg + '":"bg-slate-50 text-slate-400"}`';
+    const iconRepl = 'className:`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition ${' + s.variable + '?"text-[#475569]":r===' + s.step + '?"text-[#475569]":"text-[#cbd5e1]"}`,style:{backgroundColor:"#f1f5f9"}';
+    content = content.replaceAll(iconTarget, iconRepl);
 
-    const titleTarget = `className:\`text-xs block font-extrabold leading-none font-display \\\${r===${s.step}?"text-amber-600":"text-slate-800"}\``;
-    const titleRepl = `className:\`text-xs block font-extrabold leading-none font-display \\\${r===${s.step}?"text-[#a78235]":"text-slate-800"}\``;
-    content = content.replace(titleTarget, titleRepl);
+    const titleTarget = 'className:`text-xs block font-extrabold leading-none font-display ${r===' + s.step + '?"' + s.activeTitleColor + '":"text-slate-800"}`';
+    const titleRepl = 'className:`text-xs block font-extrabold leading-none font-display ${r===' + s.step + '?"text-[#a78235]":"text-slate-800"}`';
+    content = content.replaceAll(titleTarget, titleRepl);
   }
+
+  // Change loading spinner color to gold
+  const loaderTarget = 'className:"w-10 h-10 text-[#6366f1] animate-spin"';
+  const loaderRepl = 'className:"w-10 h-10 text-[#a78235] animate-spin"';
+  content = content.replace(loaderTarget, loaderRepl);
+
+  // Change radio accent color to gold in the search form
+  content = content.replace(/className:"accent-\[#6366f1\]"/g, 'className:"accent-[#a78235]"');
 
   console.log('12. PREMIUM GOLD THEME & TIMELINE STYLING: SUCCESS');
 } else {
