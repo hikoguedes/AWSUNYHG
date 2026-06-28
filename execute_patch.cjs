@@ -390,7 +390,7 @@ if (content.includes(buscarBtnTarget) && content.includes(bonusBoxTarget) && con
 
   for (const s of stepsData) {
     const cardTarget = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-emerald-50/80 border-[#10b981]/30 hover:border-[#10b981]":r===' + s.step + '?"bg-white ' + s.activeBorder + ' shadow-md ring-2 ' + s.activeRing + '":"bg-white border-[#e2e8f0] opacity-70 hover:opacity-100 shadow-sm glass"}`';
-    const cardRepl = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-white hover:border-amber-700":r===' + s.step + '?"bg-white shadow-md ring-2 ring-amber-50/50":"bg-white opacity-70 hover:opacity-100 shadow-sm glass"}`,style:{borderColor:' + s.variable + '?"#a78235":r===' + s.step + '?"#dfba6b":"#dfba6b",borderWidth:"1px"}';
+    const cardRepl = 'className:`cursor-pointer flex items-center justify-between p-3 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-white hover:border-amber-700":r===' + s.step + '?"bg-white shadow-md ring-2 ring-amber-50/50":"bg-white opacity-70 hover:opacity-100 shadow-sm glass"}`,style:{borderColor:' + s.variable + '?"#a78235":r===' + s.step + '?"#dfba6b":"#dfba6b",borderWidth:"1px"}';
     content = content.replaceAll(cardTarget, cardRepl);
 
     const nodeTarget = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${' + s.variable + '?"bg-[#10b981] text-white border-2 border-white shadow-md":r===' + s.step + '?"' + s.activeNodeBg + ' text-white border-2 border-white ' + s.activeNodeRing + '":"bg-white text-slate-400 border border-[#e2e8f0]"}`';
@@ -405,6 +405,11 @@ if (content.includes(buscarBtnTarget) && content.includes(bonusBoxTarget) && con
     const titleRepl = 'className:`text-xs block font-extrabold leading-none font-display ${r===' + s.step + '?"text-[#a78235]":"text-slate-800"}`';
     content = content.replaceAll(titleTarget, titleRepl);
   }
+
+  // Reduce vertical spacing of step cards from space-y-5 to space-y-2.5
+  const stepContainerTarget = 'e.jsxs("div",{className:"relative pl-8 space-y-5",children:[';
+  const stepContainerRepl = 'e.jsxs("div",{className:"relative pl-8 space-y-2.5",children:[';
+  content = content.replace(stepContainerTarget, stepContainerRepl);
 
   // Change loading spinner color to gold
   const loaderTarget = 'className:"w-10 h-10 text-[#6366f1] animate-spin"';
