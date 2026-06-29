@@ -439,6 +439,11 @@ if (content.includes(buscarBtnTarget) && content.includes(bonusBoxTarget) && con
   // Change radio accent color to gold in the search form
   content = content.replace(/className:"accent-\[#6366f1\]"/g, 'className:"accent-[#a78235]"');
 
+  // Change search container background to soft gray
+  const searchContainerTarget = 'e.jsx("section",{className:"bg-white border border-[#e2e8f0] rounded-3xl p-6 shadow-sm space-y-5 glass",children:e.jsxs("form",{onSubmit:rt,';
+  const searchContainerRepl = 'e.jsx("section",{className:"border border-[#cbd5e1] rounded-3xl p-6 shadow-sm space-y-5",style:{backgroundColor:"#f8fafc"},children:e.jsxs("form",{onSubmit:rt,';
+  content = content.replace(searchContainerTarget, searchContainerRepl);
+
   console.log('12. PREMIUM GOLD THEME & TIMELINE STYLING: SUCCESS');
 } else {
   console.error('12. PREMIUM GOLD THEME & TIMELINE STYLING targets not found');
