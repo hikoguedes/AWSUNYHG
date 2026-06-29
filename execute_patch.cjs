@@ -161,7 +161,7 @@ if (content.includes(handlersTarget)) {
 
 // 6.1 Hotel Card Wrapper & Button
 const hotelWrapperTarget = 'T.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-amber-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col justify-between transition-all glass",children:[e.jsxs("div"';
-const hotelWrapperRepl = '[{id:"next-step-card",isNextStepCard:!0},...T].map(s=>s.isNextStepCard?e.jsxs("div",{className:"bg-white border border-[#dfba6b] rounded-3xl p-6 shadow-sm flex flex-col justify-between transition-all glass",style:{borderColor:"#dfba6b",borderWidth:"1px"},children:[e.jsxs("div",{className:"space-y-4",children:[e.jsx("h3",{className:"font-extrabold text-slate-800 text-xl leading-snug font-display mt-2",children:"Seu Próximo Passo"}),e.jsx("p",{className:"text-xs text-slate-500 leading-relaxed",children:"Hospedagem confortável integrada ao sistema Unyco com facilidade de agendamento e bônus exclusivo."})]}),e.jsx("button",{className:"w-full py-3 text-slate-900 font-black text-xs rounded-xl shadow-md transition-all font-display btn-gold mb-2",children:"EXPLORAR HOTÉIS DE LUXO"})]},s.id):e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-amber-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col justify-between transition-all glass",style:{position:"relative",borderColor:(h==null?void 0:h.id)===s.id?"#0d7e68":"",borderWidth:(h==null?void 0:h.id)===s.id?"2px":""},children:[(h==null?void 0:h.id)===s.id&&e.jsx("span",{className:"absolute top-3 left-3 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#0d7e68",borderColor:"#0d7e68",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),e.jsxs("div"';
+const hotelWrapperRepl = '[{id:"next-step-card",isNextStepCard:!0},...T].map(s=>s.isNextStepCard?e.jsxs("div",{className:"bg-white border border-[#dfba6b] rounded-3xl p-6 shadow-sm flex flex-col justify-between transition-all glass",style:{borderColor:"#dfba6b",borderWidth:"1px"},children:[e.jsxs("div",{className:"space-y-4",children:[e.jsx("h3",{className:"font-extrabold text-slate-800 text-xl leading-snug font-display mt-2",children:"Seu Próximo Passo"}),e.jsx("p",{className:"text-xs text-slate-500 leading-relaxed",children:"Hospedagem confortável integrada ao sistema Unyco com facilidade de agendamento e bônus exclusivo."})]}),e.jsx("button",{className:"w-full py-3 text-slate-900 font-black text-xs rounded-xl shadow-md transition-all font-display btn-gold mb-2",children:"EXPLORAR HOTÉIS DE LUXO"})]},s.id):e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-amber-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col justify-between transition-all glass",style:{position:"relative",borderColor:(h==null?void 0:h.id)===s.id?"#dfba6b":"",borderWidth:(h==null?void 0:h.id)===s.id?"2px":""},children:[(h==null?void 0:h.id)===s.id&&e.jsx("span",{className:"absolute top-3 left-3 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#dfba6b",borderColor:"#dfba6b",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),e.jsxs("div"';
 
 const hotelBtnTarget = 'e.jsx("button",{onClick:n=>as(s,n),className:`px-4 py-2 rounded-xl text-xs font-bold transition-all font-display ${(h==null?void 0:h.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#f59e0b] hover:bg-[#d97706] text-white shadow-md shadow-amber-100 font-display"}`,children:(h==null?void 0:h.id)===s.id?"Selecionado":"Selecionar"})';
 const hotelBtnRepl = 'e.jsx("button",{onClick:n=>as(s,n),className:`px-4 py-2 rounded-xl text-xs font-bold transition-all font-display ${(h==null?void 0:h.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(h==null?void 0:h.id)===s.id?"#ef4444":"",background:(h==null?void 0:h.id)===s.id?"":"linear-gradient(135deg, #a78235 0%, #dfba6b 100%)"},children:(h==null?void 0:h.id)===s.id?"Cancelar":"Selecionar"})';
@@ -176,10 +176,10 @@ if (content.includes(hotelWrapperTarget) && content.includes(hotelBtnTarget)) {
 
 // 6.2 Car Card Wrapper & Button
 const carWrapperTarget = 'le.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-sky-400 hover:shadow-lg rounded-3xl p-4 flex flex-col justify-between h-[375px] transition-all glass",children:[e.jsxs("div"';
-const carWrapperRepl = 'le.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-sky-400 hover:shadow-lg rounded-3xl p-4 flex flex-col justify-between h-[375px] transition-all glass",style:{position:"relative",borderColor:(x==null?void 0:x.id)===s.id?"#0d7e68":"",borderWidth:(x==null?void 0:x.id)===s.id?"2px":""},children:[(x==null?void 0:x.id)===s.id&&e.jsx("span",{className:"absolute top-6 left-6 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#0d7e68",borderColor:"#0d7e68",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),e.jsxs("div"';
+const carWrapperRepl = 'le.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-sky-400 hover:shadow-lg rounded-3xl p-4 flex flex-col justify-between h-[375px] transition-all glass",style:{position:"relative",borderColor:(x==null?void 0:x.id)===s.id?"#0ea5e9":"",borderWidth:(x==null?void 0:x.id)===s.id?"2px":""},children:[(x==null?void 0:x.id)===s.id&&e.jsx("span",{className:"absolute top-6 left-6 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#0ea5e9",borderColor:"#0ea5e9",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),e.jsxs("div"';
 
 const carBtnTarget = 'e.jsx("button",{onClick:n=>is(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(x==null?void 0:x.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#0ea5e9] hover:bg-[#0284c7] text-white shadow-md shadow-sky-100 font-display"}`,children:(x==null?void 0:x.id)===s.id?"Selecionado":"Selecionar"})';
-const carBtnRepl = 'e.jsx("button",{onClick:n=>is(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(x==null?void 0:x.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(x==null?void 0:x.id)===s.id?"#ef4444":"",background:(x==null?void 0:x.id)===s.id?"":"linear-gradient(135deg, #a78235 0%, #dfba6b 100%)"},children:(x==null?void 0:x.id)===s.id?"Cancelar":"Selecionar"})';
+const carBtnRepl = 'e.jsx("button",{onClick:n=>is(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(x==null?void 0:x.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-white font-bold shadow-md font-display"}`,style:{backgroundColor:(x==null?void 0:x.id)===s.id?"#ef4444":"",background:(x==null?void 0:x.id)===s.id?"":"linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)"},children:(x==null?void 0:x.id)===s.id?"Cancelar":"Selecionar"})';
 
 if (content.includes(carWrapperTarget) && content.includes(carBtnTarget)) {
   content = content.replace(carWrapperTarget, carWrapperRepl).replace(carBtnTarget, carBtnRepl);
@@ -191,10 +191,10 @@ if (content.includes(carWrapperTarget) && content.includes(carBtnTarget)) {
 
 // 6.3 Flight Card Wrapper & Button
 const flightWrapperTarget = 'te.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-indigo-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",children:[s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.airline,className:"w-full h-full object-cover"})})';
-const flightWrapperRepl = 'te.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-indigo-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(d==null?void 0:d.id)===s.id?"#0d7e68":"",borderWidth:(d==null?void 0:d.id)===s.id?"2px":""},children:[(d==null?void 0:d.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#0d7e68",borderColor:"#0d7e68",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.airline,className:"w-full h-full object-cover"})})';
+const flightWrapperRepl = 'te.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-indigo-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(d==null?void 0:d.id)===s.id?"#6366f1":"",borderWidth:(d==null?void 0:d.id)===s.id?"2px":""},children:[(d==null?void 0:d.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#6366f1",borderColor:"#6366f1",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.airline,className:"w-full h-full object-cover"})})';
 
 const flightBtnTarget = 'e.jsx("button",{onClick:n=>rs(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(d==null?void 0:d.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#6366f1] hover:bg-[#4f46e5] text-white shadow-md shadow-indigo-100 font-display"}`,children:(d==null?void 0:d.id)===s.id?"Selecionado":"Selecionar"})';
-const flightBtnRepl = 'e.jsx("button",{onClick:n=>rs(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(d==null?void 0:d.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(d==null?void 0:d.id)===s.id?"#ef4444":"",background:(d==null?void 0:d.id)===s.id?"":"linear-gradient(135deg, #a78235 0%, #dfba6b 100%)"},children:(d==null?void 0:d.id)===s.id?"Cancelar":"Selecionar"})';
+const flightBtnRepl = 'e.jsx("button",{onClick:n=>rs(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(d==null?void 0:d.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-white font-bold shadow-md font-display"}`,style:{backgroundColor:(d==null?void 0:d.id)===s.id?"#ef4444":"",background:(d==null?void 0:d.id)===s.id?"":"linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)"},children:(d==null?void 0:d.id)===s.id?"Cancelar":"Selecionar"})';
 
 if (content.includes(flightWrapperTarget) && content.includes(flightBtnTarget)) {
   content = content.replace(flightWrapperTarget, flightWrapperRepl).replace(flightBtnTarget, flightBtnRepl);
@@ -206,10 +206,10 @@ if (content.includes(flightWrapperTarget) && content.includes(flightBtnTarget)) 
 
 // 6.4 Bus Card Wrapper & Button
 const busWrapperTarget = 'L.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-pink-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",children:[s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.provider,className:"w-full h-full object-cover"})})';
-const busWrapperRepl = 'L.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-pink-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(m==null?void 0:m.id)===s.id?"#0d7e68":"",borderWidth:(m==null?void 0:m.id)===s.id?"2px":""},children:[(m==null?void 0:m.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#0d7e68",borderColor:"#0d7e68",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.provider,className:"w-full h-full object-cover"})})';
+const busWrapperRepl = 'L.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-pink-400 hover:shadow-lg rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all glass",style:{position:"relative",borderColor:(m==null?void 0:m.id)===s.id?"#ec4899":"",borderWidth:(m==null?void 0:m.id)===s.id?"2px":""},children:[(m==null?void 0:m.id)===s.id&&e.jsx("span",{className:"absolute top-3 right-3 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#ec4899",borderColor:"#ec4899",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),s.image&&e.jsx("div",{className:"w-full md:w-36 h-28 md:h-auto bg-slate-100 relative shrink-0",children:e.jsx("img",{src:s.image,alt:s.provider,className:"w-full h-full object-cover"})})';
 
 const busBtnTarget = 'e.jsx("button",{onClick:n=>ns(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(m==null?void 0:m.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#ec4899] hover:bg-[#db2777] text-white shadow-md shadow-pink-100 font-display"}`,children:(m==null?void 0:m.id)===s.id?"Selecionado":"Selecionar"})';
-const busBtnRepl = 'e.jsx("button",{onClick:n=>ns(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(m==null?void 0:m.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(m==null?void 0:m.id)===s.id?"#ef4444":"",background:(m==null?void 0:m.id)===s.id?"":"linear-gradient(135deg, #a78235 0%, #dfba6b 100%)"},children:(m==null?void 0:m.id)===s.id?"Cancelar":"Selecionar"})';
+const busBtnRepl = 'e.jsx("button",{onClick:n=>ns(s,n),className:`px-4 py-1.5 rounded-xl font-bold transition-all font-display ${(m==null?void 0:m.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-white font-bold shadow-md font-display"}`,style:{backgroundColor:(m==null?void 0:m.id)===s.id?"#ef4444":"",background:(m==null?void 0:m.id)===s.id?"":"linear-gradient(135deg, #ec4899 0%, #db2777 100%)"},children:(m==null?void 0:m.id)===s.id?"Cancelar":"Selecionar"})';
 
 if (content.includes(busWrapperTarget) && content.includes(busBtnTarget)) {
   content = content.replace(busWrapperTarget, busWrapperRepl).replace(busBtnTarget, busBtnRepl);
@@ -221,10 +221,10 @@ if (content.includes(busWrapperTarget) && content.includes(busBtnTarget)) {
 
 // 6.5 Insurance Card Wrapper & Button
 const insWrapperTarget = 'z.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-rose-400 hover:shadow-lg rounded-3xl p-5 flex flex-col justify-between h-[320px] transition-all glass",children:[e.jsxs("div",{className:"space-y-2",children:[e.jsx("div",{className:"w-10 h-10 bg-rose-50 rounded-xl flex items-center justify-center text-[#f43f5e] border border-rose-100",children:e.jsx(we,{className:"w-5 h-5"})}),e.jsx("h3",{className:"font-bold text-slate-855 text-xs leading-tight font-display",children:s.planName||s.name})';
-const insWrapperRepl = 'z.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-rose-400 hover:shadow-lg rounded-3xl p-5 flex flex-col justify-between h-[320px] transition-all glass",style:{position:"relative",borderColor:(p==null?void 0:p.id)===s.id?"#0d7e68":"",borderWidth:(p==null?void 0:p.id)===s.id?"2px":""},children:[(p==null?void 0:p.id)===s.id&&e.jsx("span",{className:"absolute top-5 right-5 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#0d7e68",borderColor:"#0d7e68",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),e.jsxs("div",{className:"space-y-2",children:[e.jsx("div",{className:"w-10 h-10 bg-rose-50 rounded-xl flex items-center justify-center text-[#f43f5e] border border-rose-100",children:e.jsx(we,{className:"w-5 h-5"})}),e.jsx("h3",{className:"font-bold text-slate-855 text-xs leading-tight font-display",children:s.planName||s.name})';
+const insWrapperRepl = 'z.map(s=>e.jsxs("div",{className:"bg-white border border-[#e2e8f0] hover:border-rose-400 hover:shadow-lg rounded-3xl p-5 flex flex-col justify-between h-[320px] transition-all glass",style:{position:"relative",borderColor:(p==null?void 0:p.id)===s.id?"#f43f5e":"",borderWidth:(p==null?void 0:p.id)===s.id?"2px":""},children:[(p==null?void 0:p.id)===s.id&&e.jsx("span",{className:"absolute top-5 right-5 text-[9px] font-black px-2.5 py-1 rounded-full shadow font-display z-20 border",style:{backgroundColor:"#f43f5e",borderColor:"#f43f5e",borderWidth:"1.5px",color:"#ffffff"},children:"SELECIONADO"}),e.jsxs("div",{className:"space-y-2",children:[e.jsx("div",{className:"w-10 h-10 bg-rose-50 rounded-xl flex items-center justify-center text-[#f43f5e] border border-rose-100",children:e.jsx(we,{className:"w-5 h-5"})}),e.jsx("h3",{className:"font-bold text-slate-855 text-xs leading-tight font-display",children:s.planName||s.name})';
 
 const insBtnTarget = 'e.jsx("button",{onClick:n=>os(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(p==null?void 0:p.id)===s.id?"bg-emerald-500 text-white shadow-sm":"bg-[#f43f5e] hover:bg-[#e11d48] text-white shadow-md shadow-rose-100 font-display"}`,children:(p==null?void 0:p.id)===s.id?"Contratado":"Contratar"})';
-const insBtnRepl = 'e.jsx("button",{onClick:n=>os(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(p==null?void 0:p.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-slate-900 font-black shadow-md font-display"}`,style:{backgroundColor:(p==null?void 0:p.id)===s.id?"#ef4444":"",background:(p==null?void 0:p.id)===s.id?"":"linear-gradient(135deg, #a78235 0%, #dfba6b 100%)"},children:(p==null?void 0:p.id)===s.id?"Cancelar":"Contratar"})';
+const insBtnRepl = 'e.jsx("button",{onClick:n=>os(s,n),className:`w-full py-2 rounded-xl text-[10px] font-bold transition-all font-display ${(p==null?void 0:p.id)===s.id?"bg-red-500 hover:bg-red-600 text-white shadow-sm":"text-white font-bold shadow-md font-display"}`,style:{backgroundColor:(p==null?void 0:p.id)===s.id?"#ef4444":"",background:(p==null?void 0:p.id)===s.id?"":"linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)"},children:(p==null?void 0:p.id)===s.id?"Cancelar":"Contratar"})';
 
 if (content.includes(insWrapperTarget) && content.includes(insBtnTarget)) {
   content = content.replace(insWrapperTarget, insWrapperRepl).replace(insBtnTarget, insBtnRepl);
@@ -339,70 +339,90 @@ if (content.includes(buscarBtnTarget) && content.includes(bonusBoxTarget) && con
     { 
       variable: 'h', 
       step: 1, 
-      activeBorder: 'border-[#f59e0b]', 
+      activeBg: '#fef3c7', // soft amber
+      activeBorder: '#dfba6b', 
+      activeText: '#a78235',
       activeRing: 'ring-amber-50/50', 
-      activeNodeBg: 'bg-[#f59e0b]', 
+      activeNodeBg: '#a78235', 
       activeNodeRing: 'ring-4 ring-amber-50',
       activeIconBg: 'bg-amber-500 text-white',
-      activeTitleColor: 'text-amber-600'
+      activeTitleColor: 'text-amber-600',
+      activeTitleColorRepl: '#a78235',
+      originalActiveBorder: 'border-[#f59e0b]'
     },
     { 
       variable: 'x', 
       step: 2, 
-      activeBorder: 'border-[#0ea5e9]', 
+      activeBg: '#e0f2fe', // soft sky
+      activeBorder: '#0ea5e9', 
+      activeText: '#0ea5e9',
       activeRing: 'ring-sky-50/50', 
-      activeNodeBg: 'bg-[#0ea5e9]', 
+      activeNodeBg: '#0ea5e9', 
       activeNodeRing: 'ring-4 ring-sky-50',
       activeIconBg: 'bg-[#0ea5e9] text-white',
-      activeTitleColor: 'text-sky-600'
+      activeTitleColor: 'text-sky-600',
+      activeTitleColorRepl: '#0ea5e9',
+      originalActiveBorder: 'border-[#0ea5e9]'
     },
     { 
       variable: 'd', 
       step: 3, 
-      activeBorder: 'border-[#6366f1]', 
+      activeBg: '#e0e7ff', // soft indigo
+      activeBorder: '#6366f1', 
+      activeText: '#6366f1',
       activeRing: 'ring-indigo-50/50', 
-      activeNodeBg: 'bg-[#6366f1]', 
+      activeNodeBg: '#6366f1', 
       activeNodeRing: 'ring-4 ring-indigo-50',
       activeIconBg: 'bg-[#6366f1] text-white',
-      activeTitleColor: 'text-indigo-600'
+      activeTitleColor: 'text-indigo-600',
+      activeTitleColorRepl: '#6366f1',
+      originalActiveBorder: 'border-[#6366f1]'
     },
     { 
       variable: 'm', 
       step: 4, 
-      activeBorder: 'border-[#ec4899]', 
+      activeBg: '#fce7f3', // soft pink
+      activeBorder: '#ec4899', 
+      activeText: '#ec4899',
       activeRing: 'ring-pink-50/50', 
-      activeNodeBg: 'bg-[#ec4899]', 
+      activeNodeBg: '#ec4899', 
       activeNodeRing: 'ring-4 ring-pink-50',
       activeIconBg: 'bg-[#ec4899] text-white',
-      activeTitleColor: 'text-pink-600'
+      activeTitleColor: 'text-pink-600',
+      activeTitleColorRepl: '#ec4899',
+      originalActiveBorder: 'border-[#ec4899]'
     },
     { 
       variable: 'p', 
       step: 5, 
-      activeBorder: 'border-[#f43f5e]', 
+      activeBg: '#ffe4e6', // soft rose
+      activeBorder: '#f43f5e', 
+      activeText: '#f43f5e',
       activeRing: 'ring-rose-50/50', 
-      activeNodeBg: 'bg-[#f43f5e]', 
+      activeNodeBg: '#f43f5e', 
       activeNodeRing: 'ring-4 ring-rose-50',
       activeIconBg: 'bg-[#f43f5e] text-white',
-      activeTitleColor: 'text-rose-600'
+      activeTitleColor: 'text-rose-600',
+      activeTitleColorRepl: '#f43f5e',
+      originalActiveBorder: 'border-[#f43f5e]'
     }
   ];
 
   for (const s of stepsData) {
-    const cardTarget = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-emerald-50/80 border-[#10b981]/30 hover:border-[#10b981]":r===' + s.step + '?"bg-white ' + s.activeBorder + ' shadow-md ring-2 ' + s.activeRing + '":"bg-white border-[#e2e8f0] opacity-70 hover:opacity-100 shadow-sm glass"}`';
-    const cardRepl = 'className:`cursor-pointer flex items-center justify-between p-3 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-white hover:border-amber-700":r===' + s.step + '?"bg-white shadow-md ring-2 ring-amber-50/50":"bg-white opacity-70 hover:opacity-100 shadow-sm glass"}`,style:{borderColor:' + s.variable + '?"#a78235":r===' + s.step + '?"#dfba6b":"#dfba6b",borderWidth:"1px"}';
+    const cardTarget = 'className:`cursor-pointer flex items-center justify-between p-4 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"bg-emerald-50/80 border-[#10b981]/30 hover:border-[#10b981]":r===' + s.step + '?"bg-white ' + s.originalActiveBorder + ' shadow-md ring-2 ' + s.activeRing + '":"bg-white border-[#e2e8f0] opacity-70 hover:opacity-100 shadow-sm glass"}`';
+    const cardRepl = 'className:`cursor-pointer flex items-center justify-between p-3 rounded-2xl border transition-all duration-300 ${' + s.variable + '?"shadow-sm":r===' + s.step + '?"shadow-md ring-2 ' + s.activeRing + '":"shadow-sm opacity-70 hover:opacity-100"}`,style:{backgroundColor:' + s.variable + '?"#ecfdf5":r===' + s.step + '?"' + s.activeBg + '":"#ffffff",borderColor:' + s.variable + '?"#10b981":r===' + s.step + '?"' + s.activeBorder + '":"#cbd5e1",borderWidth:"1px"}';
     content = content.replaceAll(cardTarget, cardRepl);
 
     const nodeTarget = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${' + s.variable + '?"bg-[#10b981] text-white border-2 border-white shadow-md":r===' + s.step + '?"' + s.activeNodeBg + ' text-white border-2 border-white ' + s.activeNodeRing + '":"bg-white text-slate-400 border border-[#e2e8f0]"}`';
-    const nodeRepl = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${' + s.variable + '?"text-slate-900 shadow-sm":r===' + s.step + '?"text-slate-900 ring-4 ring-slate-100":"text-slate-400 border border-[#cbd5e1]"}`,style:{backgroundColor:"#ffffff",borderColor:"#cbd5e1",borderWidth:"2px"}';
+    const nodeRepl = 'className:`absolute -left-[27px] top-6 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 z-10 font-display ${' + s.variable + '?"text-white shadow-sm":r===' + s.step + '?"text-white ring-4 ring-slate-100":"text-slate-400 border border-[#cbd5e1]"}`,style:{backgroundColor:' + s.variable + '?"#10b981":r===' + s.step + '?"' + s.activeNodeBg + '":"#ffffff",borderColor:' + s.variable + '?"#ffffff":r===' + s.step + '?"#ffffff":"#cbd5e1",borderWidth:"2px"}';
     content = content.replaceAll(nodeTarget, nodeRepl);
 
     const iconTarget = 'className:`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition ${' + s.variable + '?"bg-[#10b981] text-white":r===' + s.step + '?"' + s.activeIconBg + '":"bg-slate-50 text-slate-400"}`';
-    const iconRepl = 'className:`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition ${' + s.variable + '?"text-[#475569]":r===' + s.step + '?"text-[#475569]":"text-[#cbd5e1]"}`,style:{backgroundColor:"#f1f5f9"}';
+    const iconRepl = 'className:`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition ${' + s.variable + '?"text-white":r===' + s.step + '?"text-white":"text-[#cbd5e1]"}`,style:{backgroundColor:' + s.variable + '?"#10b981":r===' + s.step + '?"' + s.activeBorder + '":"#f1f5f9"}';
     content = content.replaceAll(iconTarget, iconRepl);
 
     const titleTarget = 'className:`text-xs block font-extrabold leading-none font-display ${r===' + s.step + '?"' + s.activeTitleColor + '":"text-slate-800"}`';
-    const titleRepl = 'className:`text-xs block font-extrabold leading-none font-display ${r===' + s.step + '?"text-[#a78235]":"text-slate-800"}`';
+    const titleRepl = 'className:`text-xs block font-extrabold leading-none font-display ${' + s.variable + '?"text-[#047857]":r===' + s.step + '?"' + s.activeTitleColorRepl + '":"text-slate-800"}`';
     content = content.replaceAll(titleTarget, titleRepl);
   }
 
